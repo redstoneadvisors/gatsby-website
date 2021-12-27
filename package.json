@@ -1,9 +1,9 @@
 {
-  "name": "kcm-starter",
+  "name": "redstone-base",
   "version": "1.0.0",
   "private": true,
-  "description": "KCM Starter",
-  "author": "Mark Rodriguez",
+  "description": "Redstone Base",
+  "author": "Zach Young",
   "keywords": [
     "gatsby"
   ],

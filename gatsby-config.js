@@ -4,9 +4,9 @@ require('dotenv').config({
 
 module.exports = {
 	siteMetadata: {
-		title: 'Redstone Advisors Inc.',
+		title: 'KCM Starter',
 		description: `Site description`,
-		author: `Zach Young`,
+		author: `Koch Communications Marketing`,
 		siteUrl: `https://www.replaceme.com`,
 	},
 	plugins: [

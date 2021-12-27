@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { Breadcrumbs, Links, Legal, LegalLinks, Copyright } from "./styles";
+import { Links, Legal, Copyright } from "./styles";
+import Logo from "../../components/Logo";
 
 const Footer = ({ data }) => {
   const date = new Date();
@@ -9,9 +10,9 @@ const Footer = ({ data }) => {
 
   return (
     <footer>
-      <Breadcrumbs>
-        <Link to="/">Home</Link>
-      </Breadcrumbs>
+      <Links>
+        <Logo background="dark" />
+      </Links>
       <Legal>
         <Copyright>
           <p>{`© ${copyrightYear} ${copyright}`}</p>

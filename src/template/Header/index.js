@@ -1,11 +1,12 @@
 import * as React from "react";
-import { HeaderComponent, Container } from "./styles";
+import { Container } from "./styles";
+import Logo from "../../components/Logo";
 
 const Header = ({ data }) => {
   return (
-    <HeaderComponent>
-      <Container></Container>
-    </HeaderComponent>
+    <Container>
+      <Logo />
+    </Container>
   );
 };
 

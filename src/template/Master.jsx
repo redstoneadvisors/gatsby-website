@@ -31,19 +31,7 @@ const Master = ({ headerData, footerData, children }) => {
           "data-kontent-language-codename":
             data.sitePlugin.pluginOptions.languageCodenames[0],
         }}
-      >
-        <script type="application/ld+json">
-          {`
-						{
-							"@context": "https://schema.org",
-							"@type": "Organization",
-							"url": "https://www.redstoneadv.com",
-							"name": "Redstone Advisors",
-							"description": "Redstone Advisors ",
-						}
-					`}
-        </script>
-      </Helmet>
+      ></Helmet>
       <ThemeWrapper>
         <Header data={headerData} />
         <div>{children}</div>

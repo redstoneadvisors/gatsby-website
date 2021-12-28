@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { Container, Navigation } from "./styles";
+import { Container, Navigation, NavLink } from "./styles";
 import Logo from "../../components/Logo";
 
 const Header = () => {
@@ -39,9 +39,9 @@ const Header = () => {
       <Navigation>
         {navLinks.map((item) => {
           return (
-            <Link to={"/" + item.elements.page.value[0].elements.slug.value}>
+            <NavLink to={"/" + item.elements.page.value[0].elements.slug.value}>
               {item.elements.label.value}
-            </Link>
+            </NavLink>
           );
         })}
       </Navigation>

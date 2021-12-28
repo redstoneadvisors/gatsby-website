@@ -34,7 +34,7 @@ const Master = ({ headerData, footerData, children }) => {
       ></Helmet>
       <ThemeWrapper>
         <Header data={headerData} />
-        <div>{children}</div>
+        {children}
         <Footer data={footerData} />
       </ThemeWrapper>
     </div>

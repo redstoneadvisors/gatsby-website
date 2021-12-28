@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-pages-kontent-item-page-elements-slug-value-js",
     "path": "/what-we-do/",
     "result": {"data":{"kontentItemPage":{"elements":{"meta_description":{"value":""},"title":{"value":"What We Do"},"slug":{"value":"what-we-do"}},"system":{"id":"65481072-7787-4400-8875-8f6ba8d994cf","language":"default"}}},"pageContext":{"id":"e83ad251-2ba0-58b5-a1fc-592105392534","elements__slug__value":"what-we-do","__params":{"elements__slug__value":"what-we-do"}}},
-    "staticQueryHashes": []}
+    "staticQueryHashes": ["1600256025","3036939865","3830063921"]}

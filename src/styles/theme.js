@@ -3,15 +3,18 @@ const brand = {
   primary: "#1C2B39",
   teal: "#2C5875",
   white: "#FFFFFF",
-
-  lightBlue: "#B9DDED",
-  kochBlue: "#00A8E1",
-  blue: "#2C5875",
-  darkBlue: "#002E61",
-
-  textGray: "#444444",
-  btnGray: "#465158",
-  bgGray: "#F4F4F4",
+  green: "#339989",
+  green2: "#48574A",
+  green3: "#4D5744",
+  green4: "#95A387",
+  green5: "#D5E4CB",
+  green6: "#717D68",
+  green7: "#4C5654",
+  green8: "#5f8b83",
+  green9: "#98A886",
+  green10: "#7F9172",
+  green11: "#70ae6e",
+  green12: "#6e9075",
 };
 const fonts = {
   sans: "poppins, sans-serif",

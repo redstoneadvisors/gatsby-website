@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
     "result": {"data":{"kontentItemHomepage":{"elements":{"meta_description":{"value":"Landing page"},"title":{"value":"Homepage"},"slug":{"value":""},"sections":{"value":[{"id":"dc5d6086-468d-501a-81f5-a721ac9cf9fe","system":{"id":"392ec886-837f-4f74-89c7-9f9918891672","type":"page_hero","codename":"home_header"},"elements":{"heading":{"value":"Sample simple text field."},"body":{"value":"<p>Sample <em>rich text</em> field.</p>","links":[]}}}]}},"system":{"id":"93810326-fa02-4638-861b-cfce532bbbe0","type":"homepage","language":"default"},"preferred_language":"default"}},"pageContext":{}},
-    "staticQueryHashes": ["1600256025","3036939865"]}
+    "staticQueryHashes": ["1600256025","3036939865","3830063921"]}

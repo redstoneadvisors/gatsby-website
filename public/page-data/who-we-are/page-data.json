@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-kontent-item-page-elements-slug-value-js",
-    "path": "/who-we-are/",
-    "result": {"data":{"kontentItemPage":{"elements":{"meta_description":{"value":""},"title":{"value":"Who We Are"},"slug":{"value":"who-we-are"}},"system":{"id":"19978501-ed61-4e31-9d7d-a82e6cead753","language":"default"}}},"pageContext":{"id":"0a43781c-57b0-5a1b-be73-2bfe6f695e53","elements__slug__value":"who-we-are","__params":{"elements__slug__value":"who-we-are"}}},
-    "staticQueryHashes": ["1600256025","3036939865","3830063921"]}

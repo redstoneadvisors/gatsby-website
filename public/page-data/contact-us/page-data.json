@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-kontent-item-page-elements-slug-value-js",
-    "path": "/contact-us/",
-    "result": {"data":{"kontentItemPage":{"elements":{"meta_description":{"value":""},"title":{"value":"Contact Us"},"slug":{"value":"contact-us"}},"system":{"id":"ebd92f3f-0710-44ab-b736-3c79833b6d2b","language":"default"}}},"pageContext":{"id":"2bd17fb1-80e6-586c-a3a8-e22bc55b24e5","elements__slug__value":"contact-us","__params":{"elements__slug__value":"contact-us"}}},
-    "staticQueryHashes": ["1600256025","3036939865","3830063921"]}

@@ -2,14 +2,30 @@ import { graphql, Link } from "gatsby";
 import * as React from "react";
 import { RichTextElement } from "@kentico/gatsby-kontent-components";
 import { Container, Content, HeroSection } from "./styles";
-
+import bg from "../../../images/red-topo.svg";
 const PageHero = ({ section }) => {
   return (
     <HeroSection
       data-kontent-element-codename={section.system.codename}
       data-kontent-item-id={section.system.id}
     >
-      <Container>
+      <img
+        src={bg}
+        style={{
+          zIndex: 999999999,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          display: "block",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          opacity: 0.33,
+        }}
+      />
+      <Container backgroundImg={section.elements.background.value[0].url}>
         <Content>
           <h1>{section.elements.heading.value}</h1>
           <RichTextElement
@@ -36,6 +52,11 @@ export const PageHeroFragment = graphql`
       codename
     }
     elements {
+      background {
+        value {
+          url
+        }
+      }
       heading {
         value
       }

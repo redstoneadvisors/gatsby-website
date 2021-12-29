@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-kontent-item-page-elements-slug-value-js",
-    "path": "/why-us/",
-    "result": {"data":{"kontentItemPage":{"elements":{"meta_description":{"value":""},"title":{"value":"Why Us"},"slug":{"value":"why-us"}},"system":{"id":"622cd350-19fb-43fc-a3cb-7dbd1cdbc85f","language":"default"}}},"pageContext":{"id":"ca0482a0-85c5-5f6a-b453-eb58f818b0a3","elements__slug__value":"why-us","__params":{"elements__slug__value":"why-us"}}},
-    "staticQueryHashes": ["1600256025","3036939865","3830063921"]}

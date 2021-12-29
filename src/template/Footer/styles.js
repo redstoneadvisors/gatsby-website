@@ -19,7 +19,7 @@ export const Links = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #4c4e56;
+  background-color: #fff;
   color: #fff;
 `;
 

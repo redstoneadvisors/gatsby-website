@@ -14,16 +14,19 @@ export const HeroSection = styled.section`
 `;
 
 export const Container = styled.div`
-  ${(props) => props.theme.container};
+  background-size: cover;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  background-color: #4c4e56;
+  width: 100%;
 `;
 
 export const Content = styled.div`
-  ${(props) => props.theme.container};
-
+  position: relative;
+  z-index: 99999999;
   color: ${(props) => (props.background === "dark" ? `#ffffff` : `#C7AF87`)};
 `;
 

@@ -1,15 +1,54 @@
-# Gatsby Starter project + Kontent
-This project is a starter kit for GatsbyJS and Kentico Kontent. The project is connected to the `Gatsby Starter Koch` Kontent project by default.  abnf
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby minimal starter
+</h1>
 
-## CSS strategy
-This project uses Styled Components for localized CSS.  For truly global styles, we are importing CSS files into gatsby-browser.js for injection at runtime. For any other styles we want to be globally available we are using the Styled Components ThemeProvider to make the styles/theme.js variables accessible from any styled component.
+## 🚀 Quick start
 
-Styled Components should be localized to the component folder they are being imported into.  If a Styled Component can be reused across multiple components, consider converting it to a regular component (if it consumes its own data), or moving it to and exporting it from the styles/GlobalStyles.js file.
+1.  **Create a Gatsby site.**
 
-## Project structure
-The project source structure is broken up into several contained folders.  
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-* The `components` folder should contain either global or reusable components that are small pieces of the project overall. 
-* The `pages` folder is a Gatsby folder that will automatically create a page for each file in this folder.  
-* The `styles` folder should contain all global CSS and CSS-in-JS files.
-* The `template` folder should contain the Master component and styles. It also contains the Master template components like Header and Footer as well as the Page Sections switch component and all Page Sections components that it renders. (Possible future enhancement to structure might be to move the page sections out of the template folder. Should take further discussion.)
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
+
+2.  **Start developing.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
+
+3.  **Open the code and start customizing!**
+
+    Your site is now running at http://localhost:8000!
+
+    Edit `src/pages/index.js` to see your site update in real-time!
+
+4.  **Learn more**
+
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+## 🚀 Quick start (Gatsby Cloud)
+
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)

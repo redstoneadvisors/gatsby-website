@@ -2,13 +2,15 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Master from "../template/Master";
 import PageSections from "../template/PageSections";
-const Page = ({ data }) => {
+
+const Page = ({ data: { kontentItemPage }, location }) => {
   return (
-    <Master headerData={null} footerData={{ data: "replacewithrealdata" }}>
-      <h1 style={{ color: "#4c4e56", fontWeight: "100" }}>
-        {data.kontentItemPage.elements.title.value}
-      </h1>
-      {data?.kontentItemPage?.elements?.sections?.value?.map((section, key) => {
+    <Master
+      location={location}
+      headerData={kontentItemPage}
+      footerData={{ data: "replacewithrealdata" }}
+    >
+      {kontentItemPage.elements.sections.value.map((section, key) => {
         return <PageSections key={key} section={section} />;
       })}
     </Master>
@@ -27,13 +29,18 @@ export const query = graphql`
         title {
           value
         }
-
         slug {
           value
+        }
+        sections {
+          value {
+            ...PageSectionFragment
+          }
         }
       }
       system {
         id
+        type
         language
       }
     }

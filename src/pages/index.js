@@ -2,13 +2,11 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Master from "../template/Master";
 import PageSections from "../template/PageSections";
-
-// markup
-const HomePage = ({ data: { kontentItemHomepage } }) => {
-  // console.log(kontentItemHomepage, kontentItemSiteFooter);
+const HomePage = ({ data: { kontentItemHomepage }, location }) => {
   return (
     <Master
-      headerData={kontentItemHomepage}
+      location={location}
+      headerData={{ data: "replacewithrealdata" }}
       footerData={{ data: "replacewithrealdata" }}
     >
       {kontentItemHomepage.elements.sections.value.map((section, key) => {
@@ -22,7 +20,7 @@ export default HomePage;
 
 export const EnglishHomeQuery = graphql`
   query EnglishHomeQuery {
-    kontentItemHomepage(preferred_language: { eq: "default" }) {
+    kontentItemHomepage {
       elements {
         meta_description {
           value
@@ -44,7 +42,6 @@ export const EnglishHomeQuery = graphql`
         type
         language
       }
-      preferred_language
     }
   }
 `;

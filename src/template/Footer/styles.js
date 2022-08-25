@@ -1,36 +1,50 @@
 import styled from "styled-components";
 
-export const Breadcrumbs = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  a {
-    text-decoration: none;
-    color: #afb7bd;
-    font-size: 0.875rem;
-    font-weight: 500;
+export const Container = styled.footer`
+  background-color: #c4c4c4;
+  margin: 0;
+  padding: 80px;
+  color: #707070;
+  h2 {
+    color: #131315;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+    font-weight: bold;
   }
 `;
-
-export const Links = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background-color: #fff;
-  color: #fff;
+export const Top = styled.div``;
+export const Middle = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
-
-export const Legal = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 2rem;
-  background-color: white;
-  font-size: 0.625rem;
-  font-weight: 400;
-  color: #c7af87;
+export const MidLeft = styled.div`
+  div {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    li {
+      white-space: nowrap;
+    }
+  }
 `;
-
-export const Copyright = styled.div``;
+export const MidRight = styled.div`
+  justify-self: center;
+  div {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    margin-right: 25px;
+    path {
+      fill: #707070;
+    }
+  }
+`;
+export const Bottom = styled.div`
+  border-top: 1px solid #707070;
+`;

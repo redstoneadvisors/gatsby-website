@@ -1,35 +1,38 @@
 const brand = {
+  heroText: "#365872",
   black: "#1A1F22",
   primary: "#1C2B39",
   teal: "#2C5875",
   white: "#FFFFFF",
-  green: "#339989",
-  green2: "#48574A",
-  green3: "#4D5744",
-  green4: "#95A387",
-  green5: "#D5E4CB",
-  green6: "#717D68",
-  green7: "#4C5654",
-  green8: "#5f8b83",
-  green9: "#98A886",
-  green10: "#7F9172",
-  green11: "#70ae6e",
-  green12: "#6e9075",
+  lightBlue: "#B9DDED",
+  kochBlue: "#00A8E1",
+  blue: "#2C5875",
+  darkBlue: "#002E61",
+  textGray: "#444444",
+  btnGray: "#465158",
+  bgGray: "#F4F4F4",
+};
+const fontSize = {
+  heroText: "60px",
+  heroText_mobile: "50px",
+  bodyText: "22px",
 };
 const fonts = {
-  sans: "poppins, sans-serif",
+  sans: "font-family: azo-sans-web, sans-serif",
   serif: '"Lora", serif',
 };
 const size = {
   small: "639px",
   medium: "1024px",
   large: "1025px",
+  weird: "1300px",
 };
 const device = {
   desktop: `screen and (min-width: ${size.large})`,
   mobile: `(max-width: ${size.small})`,
   tablet: `(min-width: ${size.small}) and (max-width:${size.medium})`,
   tabletUp: `(min-width: ${size.small})`,
+  laptop: `(min-width: ${size.small}) and (max-width:${size.weird})`,
 };
 const elements = {
   text: {
@@ -47,7 +50,7 @@ const theme = {
   container: {
     width: "100%",
     maxWidth: "106.5rem",
-    padding: "0 2rem",
+    padding: "0 80px",
     margin: "0 auto",
   },
   content: {
@@ -56,6 +59,7 @@ const theme = {
   },
   device,
   fonts,
+  fontSize,
   elements,
   layers: {
     root: -1,

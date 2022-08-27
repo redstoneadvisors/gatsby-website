@@ -64,7 +64,7 @@ export const Description = styled.div`
     }
   }
 `;
-export const CTA = styled(Link)`
+export const Cta = styled(Link)`
   font-family: "PT Serif", serif;
   color: white;
   background-color: #c7ae86;

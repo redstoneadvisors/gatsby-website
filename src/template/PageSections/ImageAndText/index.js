@@ -7,7 +7,7 @@ import {
   Right,
   Title,
   Description,
-  CTA,
+  Cta,
   Tagline,
 } from "./styles";
 const ImageAndText = ({ section: { elements } }) => {
@@ -23,7 +23,7 @@ const ImageAndText = ({ section: { elements } }) => {
           <RichTextElement value={elements.description.value}></RichTextElement>
         </Description>
         <Tagline>{elements.tagline.value}</Tagline>
-        <CTA
+        <Cta
           to={
             "/" +
             elements.cta.value[0].elements.page_link.value[0].elements.slug
@@ -31,7 +31,7 @@ const ImageAndText = ({ section: { elements } }) => {
           }
         >
           {elements.cta.value[0].elements.button_text.value}
-        </CTA>
+        </Cta>
       </Right>
     </Container>
   );

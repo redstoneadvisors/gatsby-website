@@ -1,14 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Container, Inner, Quote, Author, Ellipsis } from "./styles";
+import { Container, Inner, Quote, Author, Ellipsis, Compass } from "./styles";
 import ellipsis from "../../../images/Ellipsis-blue.svg";
+import compass from "../../../images/compass.svg";
 const BlueBanner = ({ section: { elements } }) => {
   return (
     <Container>
       <Inner>
-        <Ellipsis position="top">
-          <img src={ellipsis} />
-        </Ellipsis>
+        <Compass>
+          <img src={compass} />
+        </Compass>
         <Quote>{elements.quote.value}</Quote>
         <Author>{elements.attribution.value}</Author>
         <Ellipsis position="bottom">

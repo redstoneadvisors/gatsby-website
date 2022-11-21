@@ -8,6 +8,10 @@ export const Container = styled.section`
   background-color: #e6e6e6;
   column-gap: 6rem;
   text-align: center;
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+  }
   h3 {
     font-family: "PT Serif", serif;
     font-size: 32px;
@@ -23,7 +27,20 @@ export const Container = styled.section`
     line-height: 2.2rem;
   }
 `;
-export const Left = styled.div``;
+export const Left = styled.div`
+  @media screen and (max-width: 1080px) {
+    position: relative;
+    &:before {
+      content: "";
+      background: #888888;
+      position: absolute;
+      bottom: 0;
+      left: -3rem;
+      height: 100%;
+      width: 3px;
+    }
+  }
+`;
 export const Right = styled.div`
   position: relative;
   &:before {

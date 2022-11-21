@@ -1,8 +1,17 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Container } from "./styles";
+import { Container, AccentSqaures } from "./styles";
 const SingleColumnBanner = ({ section }) => {
-  return <Container>{section.elements.body.value}</Container>;
+  return (
+    <Container>
+      <AccentSqaures>
+        <div></div>
+        <div></div>
+        <div></div>
+      </AccentSqaures>
+      {section.elements.body.value}
+    </Container>
+  );
 };
 
 export default SingleColumnBanner;

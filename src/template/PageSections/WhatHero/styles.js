@@ -8,17 +8,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 200px;
-`;
-
-export const Right = styled.div`
-  position: relative;
   img {
-    object-fit: cover;
     width: 100%;
-    height: 100%;
-    display: block;
   }
 `;
+
 export const Title = styled.h1`
   margin-top: 100px;
   font-size: 60px;
@@ -38,12 +32,15 @@ export const Title = styled.h1`
 `;
 export const Description = styled.h2`
   color: #c4c4c4;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "PT Serif", serif;
   margin-bottom: 50px;
+  @media screen and (max-width: 1080px) {
+    font-size: 16px;
+  }
 `;
 export const Quote = styled.p`
-  padding: 25px 0;
+  padding: 25px 30px;
   max-width: 900px;
   text-align: center;
   font-size: 20px;
@@ -52,6 +49,9 @@ export const Quote = styled.p`
   font-style: italic;
   line-height: 40px;
   font-weight: 100;
+  @media screen and (max-width: 1080px) {
+    font-size: 18px;
+  }
 `;
 
 export const Accent = styled.div`

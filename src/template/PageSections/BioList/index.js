@@ -1,12 +1,20 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Container, Title, Bios, Left, Right } from "./styles";
+import { Container, Title, Bios, Left, Right, AccentLines } from "./styles";
 import BioCard from "../../../components/BioCard";
 const BioList = ({ section }) => {
   return (
     <Container>
-      <Title> {section.elements.title.value}</Title>
+      <Title>
+        {section.elements.title.value}
+        <span>{section.elements.title_2.value}</span>.
+      </Title>
       <Bios>
+        <AccentLines>
+          <div></div>
+          <div></div>
+          <div></div>
+        </AccentLines>
         <Left>
           {section.elements.left_column_cards.value.map((item, index) => {
             return <BioCard index={index} data={item} />;
@@ -33,6 +41,9 @@ export const BioListFragment = graphql`
     }
     elements {
       title {
+        value
+      }
+      title_2 {
         value
       }
       left_column_cards {

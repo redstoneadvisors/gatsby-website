@@ -1,20 +1,45 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { Container, Left, Center, Right, PageLink } from "./styles";
+import { graphql, Link } from "gatsby";
+import boat from "../../../images/boat.svg";
+import {
+  Container,
+  Left,
+  Center,
+  Right,
+  PageLink,
+  Delimiter,
+  Border,
+  Background,
+} from "./styles";
 const GoldBanner = ({ section: { elements } }) => {
   return (
-    <Container>
-      <Left>
-        <img src={elements.logo.value[0].url} />
-      </Left>
-      <Center>
-        <p>{elements.description.value}</p>
-        <p>{elements.description_2.value}</p>
-      </Center>
-      <Right>
-        <PageLink to="/contact-us">{elements.cta_text.value}</PageLink>
-      </Right>
-    </Container>
+    <>
+      <Container>
+        <Background src={boat} />
+        <Left>
+          <img src={elements.logo.value[0].url} />
+        </Left>
+        <Center>
+          <p>{elements.description.value}</p>
+
+          <p>
+            <Delimiter />
+            {elements.description_2.value}
+          </p>
+
+          <p>
+            <Delimiter />
+            {elements.description_3.value}
+          </p>
+        </Center>
+        <Right></Right>
+      </Container>
+      <Link to="/contact-us">
+        <Border>
+          <span>{elements.cta_text.value}</span>
+        </Border>
+      </Link>
+    </>
   );
 };
 
@@ -44,6 +69,9 @@ export const GoldBannerFragment = graphql`
         value
       }
       description_2 {
+        value
+      }
+      description_3 {
         value
       }
     }

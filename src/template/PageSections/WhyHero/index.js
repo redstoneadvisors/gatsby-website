@@ -1,14 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  Container,
-  Left,
-  Right,
-  Accent,
-  Title,
-  Description,
-  Quote,
-} from "./styles";
+import { Container, Left, Right, Title, Description, Quote } from "./styles";
 
 const WhyHero = ({ section }) => {
   return (
@@ -19,7 +11,6 @@ const WhyHero = ({ section }) => {
         <Description>{section.elements.description.value}</Description>
       </Left>
       <Right>
-        <Accent />
         <img src={section.elements.hero.value[0].url} />
       </Right>
     </Container>

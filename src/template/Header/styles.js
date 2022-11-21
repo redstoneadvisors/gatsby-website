@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 export const Navbar = styled.nav`
-  max-width: 1920px;
   margin: 0 auto;
   display: block;
   padding: 28px 80px;
+  @media screen and (max-width: 800px) {
+    padding: 20px 30px;
+  }
   position: fixed;
   top: 0;
   left: 0;
@@ -13,12 +15,34 @@ export const Navbar = styled.nav`
   background-color: ${(props) => props.background};
   transition: all 0.2s ease;
   ul {
+    opacity: 0.8;
+    width: 100%;
+    display: block;
+    max-width: 1920px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 800px) {
+      justify-content: flex-start;
+    }
     list-style: none;
-    margin: 0;
     padding: 0;
+    li {
+      width: max-content;
+      &:nth-of-type(2) {
+        @media screen and (max-width: 800px) {
+          margin-left: auto;
+        }
+      }
+      img {
+        @media screen and (max-width: 800px) {
+          display: block;
+          width: 50%;
+          margin-left: auto;
+        }
+      }
+    }
   }
 `;
 export const Contact = styled(Link)`
@@ -33,9 +57,15 @@ export const Contact = styled(Link)`
   padding: 0 1rem;
   font-weight: 600;
   text-decoration: none;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
   &:hover {
     color: white;
-    background-color: #a08c6b;
+    background-color: #c7ae86;
+    opacity: 1;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 export const NavLink = styled(Link)`
@@ -44,6 +74,7 @@ export const NavLink = styled(Link)`
   font-weight: 500;
   font-size: 22px;
   position: relative;
+
   &:hover {
     color: #c7ae86;
   }

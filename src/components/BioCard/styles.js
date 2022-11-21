@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   width: 100%;
   max-width: 470px;
   background-color: #c7ae86;
@@ -10,6 +11,12 @@ export const Container = styled.div`
     transform: scale(1.05);
     transition: 0.1s all ease-in-out;
   }
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  /* background-image: repeating-linear-gradient(
+    #c7ae86 0px,
+    #c7ae86 24px,
+    rgba(124, 78, 41, 0.2) 25px
+  ); */
 `;
 export const Headshot = styled.img`
   display: block;
@@ -18,16 +25,17 @@ export const Headshot = styled.img`
 export const Name = styled.h3`
   color: white;
   font-family: "PT Serif", serif;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 1rem 1rem 0rem 2rem;
+  margin: 0;
 `;
 export const Position = styled.h4`
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 2rem 2rem;
   font-family: "PT Serif", serif;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
-  color: #131315;
+  color: rgba(124, 78, 41, 0.7);
 `;
 export const ModalBody = styled.div`
   display: grid;
@@ -37,9 +45,10 @@ export const ModalBody = styled.div`
 export const Left = styled.div`
   img {
     display: block;
-    width: 100%;
+    width: 80%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    margin: 0 auto;
   }
 `;
 export const Right = styled.div`
@@ -76,4 +85,13 @@ export const Right = styled.div`
     font-weight: 600;
     color: #4c4e56;
   }
+`;
+export const Border = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  border: 5px solid black;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
 `;

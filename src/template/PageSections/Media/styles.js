@@ -18,5 +18,7 @@ export const Container = styled.div`
     margin: 0 auto;
     position: relative;
     padding-bottom: 150px;
+    width: 100%;
+    max-width: 1000px;
   }
 `;

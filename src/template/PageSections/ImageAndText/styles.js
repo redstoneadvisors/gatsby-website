@@ -7,6 +7,11 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    padding: 50px 0;
+    gap: 0;
+  }
 `;
 export const Left = styled.div`
   grid-column: ${({ layout }) => (layout == "left" ? 1 : 2)};
@@ -16,19 +21,32 @@ export const Left = styled.div`
     width: 100%;
     max-width: 690px;
     border-radius: 0 100px 0 100px;
+    @media screen and (max-width: 800px) {
+      border-radius: 0;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
   }
 `;
 export const Right = styled.div`
   grid-column: ${({ layout }) => (layout == "left" ? 2 : 1)};
   grid-row: 1;
-  margin-top: 170px;
+  @media screen and (max-width: 800px) {
+    grid-row: 2;
+    grid-column: 1;
+    padding: 20px;
+  }
   strong {
     color: #4c4e56;
   }
 `;
 
 export const Title = styled.h2`
-  font-family: "PT Serif", serif;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
   font-size: 36px;
   font-weight: bold;
   position: relative;
@@ -39,29 +57,36 @@ export const Title = styled.h2`
     position: absolute;
     bottom: -10px;
     left: 0;
-    height: 3px;
+    height: 5px;
     width: 100%;
+    border-radius: 1px;
   }
 `;
 export const Description = styled.div`
   color: #989898;
   font-family: "PT Serif", serif;
   line-height: 35px;
-  padding-top: 50px;
+  padding-top: 20px;
   p {
     letter-spacing: 0.02rem;
     position: relative;
     font-size: 1rem;
-    &:before {
+    margin: 0;
+    margin-bottom: 1rem;
+    /* &:before {
       content: "";
       background: #c7ae86;
       position: absolute;
-      top: 10px;
+      top: 8px;
       transform: translateY(100%);
       left: -20px;
-      height: 5px;
-      width: 5px;
-    }
+      height: 7px;
+      width: 7px;
+      border-radius: 100px;
+    } */
+  }
+  @media screen and (max-width: 800px) {
+    padding: 20px;
   }
 `;
 export const Cta = styled(Link)`
@@ -77,6 +102,7 @@ export const Cta = styled(Link)`
   border-radius: 50px;
   font-weight: 600;
   letter-spacing: 0.02rem;
+  text-transform: uppercase;
   &:hover {
     color: white;
     background-color: #b29058;
@@ -84,11 +110,13 @@ export const Cta = styled(Link)`
   }
 `;
 export const Tagline = styled.h4`
-  color: #000;
-  font-family: "PT Serif", serif;
-  line-height: 35px;
+  width: 100%;
+  max-width: max-content;
+  color: #c7ae86;
+  font-family: "Italiana", serif;
+
+  line-height: 50px;
   font-weight: 600;
-  font-size: 16px;
-  margin: 55px 0;
-  letter-spacing: 1px;
+  font-size: 29px;
+  margin: 35px 0 55px 0;
 `;

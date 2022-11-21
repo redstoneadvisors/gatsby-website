@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 990px;
+  max-width: 1170px;
+  padding: 0 80px;
   margin: 0 auto;
+  position: relative;
 `;
 export const Title = styled.h2`
   font-family: "PT Serif", serif;
@@ -10,6 +12,10 @@ export const Title = styled.h2`
   font-size: 59px;
   margin-bottom: 175px;
   margin-top: 175px;
+  text-align: center;
+  span {
+    color: #c7ae86;
+  }
 `;
 
 export const Bios = styled.div`
@@ -18,10 +24,38 @@ export const Bios = styled.div`
   grid-template-rows: auto;
   row-gap: 115px;
   column-gap: 65px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 `;
 export const Left = styled.div`
   padding-top: 100px;
 `;
 
 export const Right = styled.div``;
+
+export const AccentLines = styled.div`
+  width: 50px;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  position: absolute;
+  gap: 15px;
+  top: 0;
+  left: 0;
+  margin-left: -10vw;
+  div {
+    width: 2px;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    &:nth-of-type(1) {
+      margin-top: 50px;
+    }
+    &:nth-of-type(3) {
+      margin-top: 100px;
+    }
+  }
+`;

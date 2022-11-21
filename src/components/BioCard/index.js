@@ -10,6 +10,7 @@ import {
   ModalBody,
   Left,
   Right,
+  Border,
 } from "./styles";
 const BioCard = ({ data, index }) => {
   console.log(data);
@@ -50,6 +51,7 @@ const BioCard = ({ data, index }) => {
       </Modal>
 
       <Container onClick={showModal} index={index}>
+        <Border />
         <Headshot src={data.elements.headshot.value[0].url} />
         <Name>{data.elements.full_name.value}</Name>
         <Position>{data.elements.position.value}</Position>

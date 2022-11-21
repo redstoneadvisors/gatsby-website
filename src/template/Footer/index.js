@@ -30,6 +30,23 @@ const Footer = () => {
           email {
             value
           }
+          legal_links {
+            value {
+              ... on kontent_item_legal_link {
+                id
+                elements {
+                  label {
+                    value
+                  }
+                  pdf {
+                    value {
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -57,6 +74,7 @@ const Footer = () => {
           </div>
         </MidLeft>
         <MidRight>
+          <h2>Contact</h2>
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -131,6 +149,15 @@ const Footer = () => {
         <RichTextElement
           value={footerData.kontentItemFooter.elements.disclosure.value}
         />
+        <div>
+          {footerData.kontentItemFooter.elements.legal_links.value.map((el) => {
+            return (
+              <a href={el.elements.pdf.value[0].url} target="_blank">
+                {el.elements.label.value}
+              </a>
+            );
+          })}
+        </div>
         <span>© 2022 Redstone Advisors, Inc. All Rights Reserved.</span>
       </Bottom>
     </Container>

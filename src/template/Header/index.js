@@ -11,6 +11,7 @@ import {
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../images/redstone-header-logo.svg";
 import { Drawer } from "antd";
+import { Link } from "gatsby";
 const Header = () => {
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
@@ -78,7 +79,9 @@ const Header = () => {
             />
           </li>
           <li>
-            <img src={Logo} alt="Redstone Advisors Inc." />
+            <Link to="/">
+              <img src={Logo} alt="Redstone Advisors Inc." />
+            </Link>
           </li>
           <li>
             <Contact to="/contact-us">Contact Us</Contact>

@@ -17,7 +17,11 @@ const WhoHero = ({ section }) => {
     <Container>
       <Left>
         <Title>{section.elements.title.value}</Title>
-        <Description>{section.elements.description.value}</Description>
+        <Description>
+          <span>{section.elements.description.value}</span>
+          <span>{section.elements.description_2.value}</span>
+          <span>{section.elements.description_3.value}</span>
+        </Description>
       </Left>
       <Right>
         <Hero>
@@ -40,6 +44,12 @@ export const WhoHeroFragment = graphql`
     }
     elements {
       description {
+        value
+      }
+      description_2 {
+        value
+      }
+      description_3 {
         value
       }
       image {

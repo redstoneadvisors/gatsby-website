@@ -51,7 +51,7 @@ export const Title = styled.h1`
   font-family: "PT Serif", serif;
   font-size: 60px;
   font-weight: 700;
-  max-width: 180px;
+
   @media screen and (max-width: 1080px) {
     max-width: 100%;
   }
@@ -79,5 +79,9 @@ export const Description = styled.p`
   line-height: 40px;
   @media screen and (max-width: 1080px) {
     font-size: 18px;
+  }
+  display: flex;
+  flex-direction: column;
+  span {
   }
 `;

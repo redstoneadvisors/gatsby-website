@@ -13,12 +13,24 @@ export const Container = styled.div`
     top: 50px;
     padding: 0 30px;
     position: relative;
-    font-family: "Petit Formal Script", cursive;
+    font-family: "Cinzel", serif;
+    max-width: 60%;
+    margin: 0 auto;
     &:before {
       content: "";
       background: #131315;
       position: absolute;
       top: -55px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 80%;
+    }
+    &:after {
+      content: "";
+      background: #131315;
+      position: absolute;
+      bottom: -55px;
       left: 50%;
       transform: translateX(-50%);
       height: 3px;

@@ -90,5 +90,11 @@ export const Bottom = styled.div`
   }
   div {
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
   }
 `;

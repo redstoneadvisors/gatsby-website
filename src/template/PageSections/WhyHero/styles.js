@@ -67,7 +67,7 @@ export const Description = styled.h2`
 `;
 export const Quote = styled.p`
   padding: 0 30px;
-  color: #c0d2ea;
+  color: #737e8c;
   font-size: 16px;
   font-style: italic;
   margin-bottom: 20px;

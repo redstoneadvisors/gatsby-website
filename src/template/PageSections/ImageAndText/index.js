@@ -23,15 +23,17 @@ const ImageAndText = ({ section: { elements } }) => {
           <RichTextElement value={elements.description.value}></RichTextElement>
         </Description>
         <Tagline>{elements.tagline.value}</Tagline>
-        <Cta
-          to={
-            "/" +
-            elements.cta.value[0].elements.page_link.value[0].elements.slug
-              .value
-          }
-        >
-          {elements.cta.value[0].elements.button_text.value}
-        </Cta>
+        {elements.cta.value[0] && (
+          <Cta
+            to={
+              "/" +
+              elements.cta.value[0].elements.page_link.value[0].elements.slug
+                .value
+            }
+          >
+            {elements.cta.value[0].elements.button_text.value}
+          </Cta>
+        )}
       </Right>
     </Container>
   );

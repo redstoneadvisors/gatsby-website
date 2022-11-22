@@ -52,7 +52,7 @@ export const Left = styled.div`
   }
 `;
 export const Right = styled.div`
-  padding: 95px;
+  padding: 50px 95px 50px 95px;
   max-height: 75vh;
   overflow: scroll;
   h1 {
@@ -74,11 +74,12 @@ export const Right = styled.div`
     font-size: 24px;
     font-weight: 600;
     color: #4c4e56;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   p {
     color: #707070;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 1.5;
   }
   strong {
     font-size: 24px;

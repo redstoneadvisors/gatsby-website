@@ -15,7 +15,15 @@ const ImageAndText = ({ section: { elements } }) => {
   return (
     <Container>
       <Left layout={elements.layout.value[0].codename}>
-        <img src={elements.image.value[0].url} />
+        {
+          (elements.image.value[0].type = "video/mp4" ? (
+            <video muted={true} autoPlay={true}>
+              <source src={elements.image.value[0].url} type="video/mp4" />
+            </video>
+          ) : (
+            <img src={elements.image.value[0].url} />
+          ))
+        }
       </Left>
       <Right layout={elements.layout.value[0].codename}>
         <Title>{elements.title.value}</Title>
@@ -64,6 +72,7 @@ export const ImageAndTextFragment = graphql`
           url
           height
           description
+          type
         }
       }
       description {

@@ -21,9 +21,13 @@ export const Left = styled.div`
     width: 100%;
     max-width: 690px;
     border-radius: 0 100px 0 100px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
     @media screen and (max-width: 800px) {
       border-radius: 0;
     }
+  }
+  video {
+    width: 130%;
   }
   @media screen and (max-width: 800px) {
     grid-column: 1;

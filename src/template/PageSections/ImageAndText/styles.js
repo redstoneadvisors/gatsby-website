@@ -27,7 +27,7 @@ export const Left = styled.div`
     }
   }
   video {
-    width: 130%;
+    width: 100%;
   }
   @media screen and (max-width: 800px) {
     grid-column: 1;

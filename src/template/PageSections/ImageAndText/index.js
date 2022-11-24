@@ -15,7 +15,7 @@ const ImageAndText = ({ section: { elements } }) => {
   return (
     <Container>
       <Left layout={elements.layout.value[0].codename}>
-        {elements.image.value[0].type == "video/mp4" ? (
+        {elements.image.value[0]?.type == "video/mp4" ? (
           <video muted={true} autoPlay={true}>
             <source src={elements.image.value[0]?.url} type="video/mp4" />
           </video>

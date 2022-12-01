@@ -42,7 +42,6 @@ const WhoHero = ({ section }) => {
 export default WhoHero;
 export const WhoHeroFragment = graphql`
   fragment WhoHeroFragment on kontent_item_section___who_we_are_hero {
-    id
     system {
       id
       type

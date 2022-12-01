@@ -36,7 +36,6 @@ const WhoHero = ({ section }) => {
 export default WhoHero;
 export const ContactHeroFragment = graphql`
   fragment ContactHeroFragment on kontent_item_contact_hero {
-    id
     system {
       id
       type

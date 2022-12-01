@@ -18,15 +18,9 @@ const WhoHero = ({ section }) => {
   return (
     <Container>
       <Left>
-        <Quote>
-          <RichTextElement value={section.elements.description_rt.value} />
-        </Quote>
         <Title>{section.elements.title.value}</Title>
         <Description>
-          <span>{section.elements.description_2.value}</span>
-        </Description>
-        <Description>
-          <span>{section.elements.description_3.value}</span>
+          <RichTextElement value={section.elements.description.value} />
         </Description>
       </Left>
       <Right>
@@ -40,8 +34,8 @@ const WhoHero = ({ section }) => {
 };
 
 export default WhoHero;
-export const WhoHeroFragment = graphql`
-  fragment WhoHeroFragment on kontent_item_section___who_we_are_hero {
+export const ContactHeroFragment = graphql`
+  fragment ContactHeroFragment on kontent_item_contact_hero {
     id
     system {
       id
@@ -49,9 +43,6 @@ export const WhoHeroFragment = graphql`
       codename
     }
     elements {
-      description_rt {
-        value
-      }
       description {
         value
       }
@@ -63,23 +54,22 @@ export const WhoHeroFragment = graphql`
       }
       image {
         value {
-          name
+          width
+          url
           height
           description
-          url
-          width
-        }
-      }
-      texture {
-        value {
-          description
-          height
-          url
-          width
         }
       }
       title {
         value
+      }
+      texture {
+        value {
+          url
+          description
+          height
+          width
+        }
       }
     }
   }

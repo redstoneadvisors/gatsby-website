@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const Left = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 0 30px;
   /* padding-left: 80px; */
 `;
@@ -71,7 +71,8 @@ export const Title = styled.h1`
   }
 `;
 export const Description = styled.p`
-  margin-top: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
   font-family: "PT Serif", serif;
   font-size: 20px;
   max-width: 475px;

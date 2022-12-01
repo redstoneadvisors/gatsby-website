@@ -16,6 +16,7 @@ import BodyCopy from "./BodyCopy";
 import Media from "./Media";
 import SingleImageDoubleText from "./SingleImageDoubleText";
 import WhyBanner from "./WhyBanner";
+import ContactHero from "./ContactHero";
 const PageSections = ({ section }) => {
   switch (section?.system?.type) {
     case "section___home_hero": {
@@ -65,6 +66,9 @@ const PageSections = ({ section }) => {
     }
     case "why_us_banner": {
       return <WhyBanner section={section} />;
+    }
+    case "contact_hero": {
+      return <ContactHero section={section} />;
     }
     default:
       return null;
@@ -123,6 +127,9 @@ export const PageSectionFragment = graphql`
     }
     ... on kontent_item_why_us_banner {
       ...WhyBannerFragment
+    }
+    ... on kontent_item_contact_hero {
+      ...ContactHeroFragment
     }
   }
 `;

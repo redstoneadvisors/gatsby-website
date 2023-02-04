@@ -4,7 +4,7 @@ import { Container } from "./styles";
 const Media = ({ section }) => {
   return (
     <Container>
-      <img src={section.elements.media.value[0].url} />
+      <img src={section.elements.media?.value[0]?.url} />
     </Container>
   );
 };

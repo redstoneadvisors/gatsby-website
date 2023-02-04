@@ -17,13 +17,14 @@ import Media from "./Media";
 import SingleImageDoubleText from "./SingleImageDoubleText";
 import WhyBanner from "./WhyBanner";
 import ContactHero from "./ContactHero";
-const PageSections = ({ section }) => {
+import TwoColumnSection from "./TwoColumnSection";
+const PageSections = ({ section, location}) => {
   switch (section?.system?.type) {
     case "section___home_hero": {
       return <HomeHero section={section} />;
     }
     case "section___image_and_text": {
-      return <ImageAndText section={section} />;
+      return <ImageAndText section={section} location={location}/>;
     }
     case "blue_banner": {
       return <BlueBanner section={section} />;
@@ -69,6 +70,9 @@ const PageSections = ({ section }) => {
     }
     case "contact_hero": {
       return <ContactHero section={section} />;
+    }
+    case "two_column_section": {
+      return <TwoColumnSection section={section} />;
     }
     default:
       return null;
@@ -130,6 +134,9 @@ export const PageSectionFragment = graphql`
     }
     ... on kontent_item_contact_hero {
       ...ContactHeroFragment
+    }
+    ... on kontent_item_two_column_section {
+      ...TwoColumnSectionFragment
     }
   }
 `;

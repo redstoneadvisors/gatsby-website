@@ -70,41 +70,96 @@ export const Contact = styled(Link)`
 `;
 export const NavLink = styled(Link)`
   display: block;
-  color: #4d4e56;
-  font-weight: 500;
-  font-size: 22px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 12px;
   position: relative;
-
-  &:hover {
+  text-transform: uppercase;
+  font-family: "Poppins", serif;
+  span {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Poppins", serif !important;
+  }
+  &:hover span {
     color: #c7ae86;
   }
-  &:hover:after {
+  &:last-of-type {
+    grid-column: 1/3;
     width: 100%;
-    transition: all 0.2s ease;
-  }
-  &:after {
-    content: "";
-    background: #c7ae86;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    height: 2px;
-    width: 20%;
+    max-width: none;
   }
 `;
 export const NavList = styled.ul`
+  display: block;
+  width: 100%;
   list-style: none;
-  margin-top: 50px;
-  svg {
-    margin-right: 20px;
-    height: 20px;
-    width: 30px;
-    color: #c4c4c4;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content max-content;
+  gap: 1rem;
+  height: min-content;
+  img {
+    height: 60px;
   }
   li {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: max-content;
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
     margin-bottom: 1rem;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 40px 20px 15px 20px;
+    &:last-of-type {
+      grid-column: 1/3;
+      width: 100%;
+      max-width: none;
+    }
+
+    border: 4px solid;
+    border-image: repeating-linear-gradient(
+        135deg,
+        #c7ae86 0 5px,
+        #c7ae86 0 10px,
+        #c7ae86 0 15px
+      )
+      3;
+    -webkit-mask: conic-gradient(
+          from 180deg at top 4px right 4px,
+          #0000 90deg,
+          #000 0
+        )
+        var(--_i, 200%) 0 /200% var(--_i, 4px) border-box no-repeat,
+      conic-gradient(at bottom 4px left 4px, #0000 90deg, #000 0) 0
+        var(--_i, 200%) / var(--_i, 4px) 200% border-box no-repeat,
+      linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: scale ease-in-out 300ms;
+      background: #fff;
+      --_i: 100%;
+      color: #cc333f;
+      transition: 0.2s, -webkit-mask-size 0.2s 0.2s;
+    }
   }
+`;
+export const Active = styled.div`
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #c7ae86;
+  margin: 0 auto;
 `;

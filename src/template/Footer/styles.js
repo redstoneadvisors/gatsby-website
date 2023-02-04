@@ -10,7 +10,7 @@ export const Container = styled.footer`
   }
   color: #707070;
   h2 {
-    color: #131315;
+    color: rgb(77, 78, 86);
     font-family: "PT Serif", serif;
     font-size: 20px;
     font-weight: bold;

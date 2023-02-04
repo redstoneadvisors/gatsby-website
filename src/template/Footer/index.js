@@ -158,7 +158,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <span>© 2022 Redstone Advisors, Inc. All Rights Reserved.</span>
+        <span>© 2023 Redstone Advisors, Inc. All Rights Reserved.</span>
       </Bottom>
     </Container>
   );

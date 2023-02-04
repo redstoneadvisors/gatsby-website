@@ -81,38 +81,39 @@ const ContactForm = ({ section }) => {
       <Background>
         <Left>
           <form ref={form}>
-            <label>
-              Name
+       
               <input
                 name="user_name"
                 type="text"
+                placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-            </label>
-            <label>
-              Email
+          
+        
               <input
                 name="user_email"
                 type="email"
+                placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-            </label>
-            <label>
-              Message
+       
+     
               <textarea
                 name="user_message"
                 type="message"
+                placeholder="Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-            </label>
+         
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey="6Lfp3XIhAAAAAOuya3QU1vAoiNqagxUyNbu5tWHb"
               onChange={onChange}
               theme="light"
+              style={{width:'100%'}}
             />
             <Submit onClick={(e) => handleSubmit(e)}>Submit</Submit>
           </form>

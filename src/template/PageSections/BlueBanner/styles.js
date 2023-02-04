@@ -17,11 +17,13 @@ export const Inner = styled.div`
   }
 `;
 export const Quote = styled.h2`
-  font-size: 32px;
-  font-family: "PT Serif", serif;
+  font-size: 26px;
+  font-family: "Cinzel",serif;
   font-style: italic;
-  color: white;
+  color:#5D7088;
   padding: 0 0 0 0;
+  max-width: 70%;
+  margin: 0 auto;
   opacity: 0.9;
 `;
 export const Author = styled.p`

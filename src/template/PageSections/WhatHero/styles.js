@@ -1,15 +1,29 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  overflow: hidden;
   img {
     width: 100%;
+  }
+  video{
+    position: absolute;
+    z-index:-1;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    width: auto;
+    filter: grayscale(100%);
+
   }
 `;
 
@@ -20,13 +34,14 @@ export const Title = styled.h1`
   font-weight: bold;
   width: max-content;
   position: relative;
+  z-index: 99;
   &:after {
     content: "";
     background: #c7ae86;
     position: absolute;
     bottom: -10px;
     left: 0;
-    height: 8px;
+    height: 6px;
     width: 100%;
   }
 `;
@@ -61,3 +76,13 @@ export const Accent = styled.div`
   clip-path: polygon(0 0, 30% 0, 0 100%, 0% 100%);
   background-color: #86a1c3;
 `;
+export const Layer = styled.div`
+background:linear-gradient(180deg, rgba(255,255,255,.7),rgba(255,255,255,.95), rgb(255,255,255));
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  outline: 6px solid white;
+  outline-offset: 15px;
+`

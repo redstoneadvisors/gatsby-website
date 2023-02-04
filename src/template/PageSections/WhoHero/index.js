@@ -18,9 +18,7 @@ const WhoHero = ({ section }) => {
   return (
     <Container>
       <Left>
-        <Quote>
-          <RichTextElement value={section.elements.description_rt.value} />
-        </Quote>
+     
         <Title>{section.elements.title.value}</Title>
         <Description>
           <span>{section.elements.description_2.value}</span>
@@ -34,6 +32,9 @@ const WhoHero = ({ section }) => {
           <HeroImage src={section.elements.image.value[0].url} />
           <HeroTexture src={section.elements.texture.value[0].url} />
         </Hero>
+        <Quote>
+          <RichTextElement value={section.elements.description_rt.value} />
+        </Quote>
       </Right>
     </Container>
   );

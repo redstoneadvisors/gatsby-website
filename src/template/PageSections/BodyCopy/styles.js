@@ -7,14 +7,15 @@ export const Container = styled.div`
   p {
     max-width: 1290px;
     margin: 0 auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Cinzel",serif;
     font-size: 22px;
     line-height: 2.5rem;
     color: #888888;
+    text-align: center;
   }
   code {
     text-decoration: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Cinzel",serif;
     font-weight: bold;
     color: #131315;
     position: relative;

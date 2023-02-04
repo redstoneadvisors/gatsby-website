@@ -57,27 +57,13 @@ const Master = ({headerData, footerData, children, location}) => {
 						}
 					`}
 				</script>
-				<script
-					src="https://ab3fa17f71e2419bb6efe375779a6318.js.ubembed.com"
-					async></script>
-				<script
-					src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
-					type="text/javascript"
-					charset="UTF-8"
-					data-domain-script="eedfa13c-3126-4cd1-9687-dbae1b36efa6"></script>
-				<script>
-					{`function OptanonWrapper() {window.dataLayer.push({event: 'OneTrustGroupsUpdated'},console.log("optanonwrapper fired")); }`}
-				</script>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link
 					rel="preconnect"
 					href="https://fonts.gstatic.com"
 					crossorigin
 				/>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-					rel="stylesheet"
-				/>
+
 			</Helmet>
 			<ThemeWrapper>
 				<Header

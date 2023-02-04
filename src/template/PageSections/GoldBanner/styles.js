@@ -4,7 +4,7 @@ export const Container = styled.section`
   background-color: #c7ae86;
   display: grid;
   position: relative;
-  grid-template-columns: max-content 1fr max-content;
+  grid-template-columns: 1fr 1fr 1fr;
   /* border-bottom: 64px solid #a08c6b; */
   padding: 80px 40px 50px 40px;
   align-items: center;

@@ -8,15 +8,21 @@ import {
   Title,
   Description,
   Quote,
+  Layer
 } from "./styles";
 
 const WhatHero = ({ section }) => {
   return (
     <Container>
+          <video muted={true} autoPlay={true} loop={true} poster={section.elements.poster?.value[0]?.url}>
+            <source src={section.elements.multimedia?.value[0]?.url} type="video/mp4" />
+          </video>
+          <Layer>
       <Title>{section.elements.title.value}</Title>
       <Quote>{section.elements.quote.value}</Quote>
       <Description>{section.elements.author.value}</Description>
-      <img src={section.elements.multimedia.value[0].url} />
+      </Layer>
+
     </Container>
   );
 };
@@ -33,6 +39,14 @@ export const WhatHeroFragment = graphql`
     elements {
       author {
         value
+      }
+      poster {
+        value {
+          description
+          height
+          url
+          width
+        }
       }
       multimedia {
         value {

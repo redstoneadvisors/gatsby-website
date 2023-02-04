@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 300px;
+  font-family: "Cinzel",serif;
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
   }
@@ -31,7 +32,7 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px;
+  padding: 50px 100px 50px 100px;
 `;
 
 export const Title = styled.h2`
@@ -51,6 +52,6 @@ export const Title = styled.h2`
 export const Description = styled.p`
   font-size: 18px;
   color: #888888;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 2.5rem;
 `;

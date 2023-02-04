@@ -40,5 +40,6 @@ export const Container = styled.div`
   margin-bottom: 50px;
   img {
     width: 100%;
+    filter: sepia(100);
   }
 `;

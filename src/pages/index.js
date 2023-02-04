@@ -10,7 +10,7 @@ const HomePage = ({ data: { kontentItemHomepage }, location }) => {
       footerData={{ data: "replacewithrealdata" }}
     >
       {kontentItemHomepage.elements.sections.value.map((section, key) => {
-        return <PageSections key={key} section={section} />;
+        return <PageSections key={key} section={section} location={location}/>;
       })}
     </Master>
   );

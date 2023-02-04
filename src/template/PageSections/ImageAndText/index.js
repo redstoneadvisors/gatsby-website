@@ -9,27 +9,31 @@ import {
   Description,
   Cta,
   Tagline,
+  StaticImage
 } from "./styles";
-const ImageAndText = ({ section: { elements } }) => {
-  console.log(elements);
+import { useLocation } from '@reach/router';
+const ImageAndText = ({ section: { elements }, orientation }) => {
+  const location = useLocation()
   return (
-    <Container>
+    <Container  location={location.pathname}>
       <Left layout={elements.layout.value[0].codename}>
+      {orientation=='two-column' || elements.image_dimensions?.value[0]?.codename == "normal" || elements.layout.value[0].codename == 'stacked' ?  <Title orientation={orientation}>{elements.title.value}</Title> : null}
         {elements.image.value[0]?.type == "video/mp4" ? (
-          <video muted={true} autoPlay={true}>
+          <video muted={false} autoPlay={false} controls poster={elements.poster_image.value[0]?.url}>
             <source src={elements.image.value[0]?.url} type="video/mp4" />
           </video>
         ) : (
-          <img src={elements.image.value[0]?.url} />
+          <StaticImage src={elements.image.value[0]?.url} dimensions={elements.image_dimensions?.value[0]?.codename} />
         )}
       </Left>
-      <Right layout={elements.layout.value[0].codename}>
-        <Title>{elements.title.value}</Title>
-        <Description>
+      <Right layout={elements.layout.value[0].codename} location={location.pathname}>
+      {orientation=='two-column' && elements.image_dimensions?.value[0]?.codename  == "normal" || location.pathname == '/' ? <Title orientation={orientation} location={location.pathname}>{elements.title.value}</Title> :null  }
+        <Description orientation={orientation} location={location.pathname}>
           <RichTextElement value={elements.description.value}></RichTextElement>
         </Description>
         <Tagline>{elements.tagline.value}</Tagline>
         {elements.cta.value[0] && (
+          
           <Cta
             to={
               "/" +
@@ -71,6 +75,19 @@ export const ImageAndTextFragment = graphql`
           height
           description
           type
+        }
+      }
+      poster_image {
+        value {
+          description
+          height
+          url
+          width
+        }
+      }
+      image_dimensions {
+        value {
+          codename
         }
       }
       description {

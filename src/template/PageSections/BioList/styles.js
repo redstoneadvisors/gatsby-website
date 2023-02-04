@@ -15,6 +15,7 @@ export const Title = styled.h2`
   text-align: center;
   span {
     color: #c7ae86;
+    text-transform: uppercase;
   }
 `;
 

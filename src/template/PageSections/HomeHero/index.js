@@ -9,11 +9,11 @@ import {
   Tagline,
   Graphic,
   Topo,
+  Border
 } from "./styles";
-import video from "../../../images/road3.mp4";
-import Logo from "../../../images/homepage-redstone-logo.svg";
+import video from "../../../images/car3.mp4";
+import Logo from "../../../images/logo-trans.svg";
 import Top from "../../../images/top.svg";
-import Watermark from "../../../images/home-red-repeat-bg.svg";
 import bg from "../../../images/sq-topo-g.svg";
 const HomeHero = ({ section: { elements } }) => {
   const videoRef = React.useRef();
@@ -39,14 +39,18 @@ const HomeHero = ({ section: { elements } }) => {
           <img src={Logo} />
         </div>
       </Left>
-      <Right background={Watermark}>
+      <Right>
+        <Border>
+    
         <Intro>{elements.intro.value}</Intro>
         <SubIntro>{elements.sub_intro.value}</SubIntro>
         <Graphic>
           <img src={elements.graphic.value[0].url} />
         </Graphic>
         <Tagline>{elements.tagline.value}</Tagline>
+        </Border>
       </Right>
+      
     </Container>
   );
 };

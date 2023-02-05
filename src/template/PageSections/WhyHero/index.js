@@ -1,17 +1,23 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Container, Left, Right, Title, Description, Quote } from "./styles";
+import { Container, Left, Right, Title, Description, Quote, Quote2 } from "./styles";
+import { RichTextElement } from "@kentico/gatsby-kontent-components";
 
 const WhyHero = ({ section }) => {
   return (
     <Container>
       <Left>
-        <Quote>{section.elements.quote.value}</Quote>
+  
         <Title>{section.elements.title.value}</Title>
-        <Description>{section.elements.description.value}</Description>
+        <Description><RichTextElement value={section.elements.description_rt.value}></RichTextElement></Description>
       </Left>
       <Right>
-        <img src={section.elements.hero.value[0].url} />
+      <video muted={true} autoPlay={true} loop={true}>
+            <source src={section.elements.hero.value[0].url} type="video/mp4" />
+          </video>
+        <Quote2 order={1}>{section.elements.quote.value}<span>-{section.elements.author.value}-</span></Quote2>
+        <Quote2 order={2}>{section.elements.quote.value}<span>-{section.elements.author.value}-</span></Quote2>
+        <Quote2 order={3}>{section.elements.quote.value}<span>-{section.elements.author.value}-</span></Quote2>
       </Right>
     </Container>
   );
@@ -33,6 +39,9 @@ export const WhyHeroFragment = graphql`
       description {
         value
       }
+      description_rt {
+        value
+      }
       hero {
         value {
           description
@@ -42,6 +51,9 @@ export const WhyHeroFragment = graphql`
         }
       }
       quote {
+        value
+      }
+      author{
         value
       }
       title {

@@ -31,7 +31,7 @@ export const Topo = styled.img`
 
 export const Left = styled.div`
   /* background-image: url(${(props) => props.background}); */
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.7);
+  /* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.7); */
   @media screen and (max-width: 1000px) {
     display: none;
   }
@@ -40,7 +40,7 @@ export const Left = styled.div`
   position: relative;
   z-index: 2;
   img {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   div {
     display: flex;
@@ -51,16 +51,7 @@ export const Left = styled.div`
     z-index: -2;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* &:after {
-      content: "";
-      background: rgba(199, 174, 134, 0.2);
-      position: absolute;
-      top: 0px;
-      right: -2px;
-      height: 100%;
-      width: 2px;
-    } */
+    background:linear-gradient(180deg, rgba(0,0,0,.9) 10%, rgba(0,0,0,0) 90%);
   }
 `;
 
@@ -75,33 +66,35 @@ export const Right = styled.div`
 `;
 export const Intro = styled.h2`
   font-family: "Cinzel", serif;
-  font-size: 39px;
-  color: #cccccc;
-  font-weight: 700;
+  font-size: 50px;
+  color:  rgba(204, 204, 204, .9);
+  font-weight: 600;
   margin: 0;
-  margin-bottom: 0.1rem;
+  padding-bottom: 1rem;
   text-align: center;
   line-height: 1.1;
   @media screen and (max-width: 1000px) {
-    margin-bottom: 2.1rem;
+
   }
 `;
 export const SubIntro = styled.h3`
   font-family: "Cinzel", serif;
-  font-size: 30px;
-  color: #cccccc;
+  font-size: 38px;
+  color: rgba(204, 204, 204, .9);
   font-weight: 600;
-  padding-bottom: 3vh;
   text-align: center;
+
 `;
 export const Tagline = styled.h3`
   font-family: "Cinzel", serif;
-  color: #cccccc;
+  color: rgba(204, 204, 204, 1);
   text-transform: uppercase;
-  font-size: 25px;
-  font-weight: 200;
-  padding-top: 6vh;
+  font-size: 18px;
+  font-weight: 600;
   text-align: center;
+  padding-top: 1rem;
+position: relative;
+bottom: -60px;
   @media screen and (max-width: 1000px) {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -109,10 +102,22 @@ export const Tagline = styled.h3`
   }
 `;
 export const Graphic = styled.div`
-  opacity: 0.8;
+
   img {
+    rotate: 90deg;
+    opacity: .7;
     display: block;
-    width: 60%;
-    margin: 0 auto;
+    width: 30%;
+    margin: 4rem auto 2rem auto;
   }
 `;
+
+export const Border = styled.div`
+/* border-left: 4px solid rgba(204, 204, 204, .3);
+border-right: 4px solid  rgba(204, 204, 204, .3); */
+/* padding: 6rem;
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+`

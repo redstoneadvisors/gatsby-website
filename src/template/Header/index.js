@@ -8,6 +8,7 @@ import building from '../../images/Large/building.svg'
 import woman from '../../images/Large/woman.svg'
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../images/redstone-header-logo.svg";
+import LogoWhite from '../../images/red-long-white2.svg'
 import { Drawer } from "antd";
 import { Link } from "gatsby";
 import redstone from '../../images/solo-red-dark.svg'
@@ -16,6 +17,34 @@ import { useLocation } from '@reach/router';
 const Header = () => {
   const location = useLocation()
   const [visible, setVisible] = useState(false);
+
+
+
+  const stupidFn = (component) =>{
+    if(location.pathname == '/why-us' || location.pathname == '/what-we-do'){
+      return (<Link to="/" >
+              <img src={LogoWhite} alt="Redstone Advisors Inc." />
+            </Link>)
+    }else{
+      if(location.pathname == '/'){
+        if(headerColor == 'white'){
+          return component
+        }else{
+          return null
+        }
+      }
+      if(headerColor == 'white'){
+        return component
+      }
+      if(location.pathname != '/'){
+        return component
+      }
+  
+    }
+
+    
+
+  }
   const showDrawer = () => {
     setVisible(true);
   };
@@ -107,27 +136,25 @@ const Header = () => {
       </Drawer>
       <Navbar
         background={headerColor}
-        style={
-          headerColor == "white"
-            ? { boxShadow: "0px 6px 6px -3px rgba(0,0,0,0.075)" }
-            : null
-        }
+     
       >
         <ul>
           <li>
             <FontAwesomeIcon
               icon={faBars}
-              style={{ color: "#C7AE86", cursor: "pointer" }}
+              style={   headerColor == "white" || (location.pathname != '/' && location.pathname != '/what-we-do' && location.pathname != '/why-us')
+              ? { color: "#C7AE86", cursor: "pointer", fontSize:'1.2rem' }
+              : { color: "#fff", cursor: "pointer", fontSize:'1.2rem' }}
               onClick={showDrawer}
             />
           </li>
-          <li>
-            <Link to="/">
+        <li>
+           {stupidFn( <Link to="/" >
               <img src={Logo} alt="Redstone Advisors Inc." />
-            </Link>
+            </Link>)}
           </li>
           <li>
-            <Contact to="/contact-us">Contact Us</Contact>
+            <Contact  location={location.pathname}  headerColor={headerColor} to="/contact-us">Contact Us</Contact>
           </li>
         </ul>
       </Navbar>

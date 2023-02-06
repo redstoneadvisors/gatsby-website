@@ -6,7 +6,7 @@ export const Container = styled.section`
   position: relative;
   grid-template-columns: 1fr 1fr 1fr;
   /* border-bottom: 64px solid #a08c6b; */
-  padding: 80px 40px 50px 40px;
+  padding: 20px 40px 10px 40px;
   align-items: center;
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
@@ -41,6 +41,9 @@ export const Border = styled.div`
 `;
 export const Left = styled.div`
   padding-left: 100px;
+  img{
+    width: 10%;
+  }
   @media screen and (max-width: 800px) {
     padding: 20px;
     margin: 0 auto;
@@ -49,18 +52,21 @@ export const Left = styled.div`
 export const Center = styled.div`
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
   @media screen and (max-width: 1330px) {
     display: block;
     padding: 30px 0;
     text-align: center;
   }
   p {
+    margin-bottom: 0;
     height: max-content;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
     color: #7c6b50;
-    font-size: 28px;
+    font-size: 24px;
     font-family: "PT Serif", serif;
     line-height: 20px;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);

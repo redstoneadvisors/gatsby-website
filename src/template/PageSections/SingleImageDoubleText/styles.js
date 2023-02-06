@@ -2,18 +2,22 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 300px;
   font-family: "Cinzel",serif;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     grid-template-columns: 1fr;
+    margin-bottom: 100px;
   }
 `;
 
 export const Left = styled.div`
+width: 100%;
   grid-column: ${({ layout }) => (layout == "left" ? 1 : 2)};
+
   grid-row: 1;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     grid-column: 1;
   }
   img {
@@ -23,9 +27,10 @@ export const Left = styled.div`
   }
 `;
 export const Right = styled.div`
+width: 100%;
   grid-column: ${({ layout }) => (layout == "left" ? 2 : 1)};
   grid-row: 1;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     grid-row: 2;
     grid-column: 1;
   }
@@ -33,6 +38,9 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 100px 50px 100px;
+  @media screen and (max-width: 1080px) {
+    padding: 50px 40px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -41,7 +49,9 @@ export const Title = styled.h2`
   color: #c7ae86;
   font-weight: bold;
   font-style: italic;
-  width: max-content;
+  @media screen and (max-width: 800px) {
+   font-size: 30px;
+  }
   margin-left: ${(props) =>
     props.layout == "left" && props.order == 1
       ? "auto"

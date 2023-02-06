@@ -25,6 +25,11 @@ const BioList = ({ section }) => {
             return <BioCard index={index} data={item} />;
           })}
         </Right>
+        <AccentLines layout={'right'}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </AccentLines>
       </Bios>
     </Container>
   );

@@ -6,28 +6,29 @@ export const Container = styled.section`
   overflow: hidden;
 `;
 export const Inner = styled.div`
-  max-width: 1515px;
+  max-width: 1650px;
   margin: 0 auto;
   color: white;
 
-  padding: 100px 100px;
+  padding: 60px 50px 40px 50px ;
   text-align: center;
   @media screen and (max-width: 800px) {
-    padding: 100px 30px;
+    padding: 40px 30px;
   }
 `;
 export const Quote = styled.h2`
-  font-size: 26px;
+  font-size: 23px;
   font-family: "Cinzel",serif;
   font-style: italic;
-  color:#5D7088;
+  color:rgba(255,255,255,.8);
   padding: 0 0 0 0;
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   opacity: 0.9;
 `;
 export const Author = styled.p`
   text-align: center;
+  padding-top: 10px;
   opacity: 0.7;
   color: rgb(92, 112, 137);
 `;

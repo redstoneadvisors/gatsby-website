@@ -32,10 +32,12 @@ export const Bios = styled.div`
   }
 `;
 export const Left = styled.div`
-  padding-top: 100px;
+
 `;
 
-export const Right = styled.div``;
+export const Right = styled.div`
+  padding-top: 100px;
+`;
 
 export const AccentLines = styled.div`
   width: 50px;
@@ -49,7 +51,7 @@ export const AccentLines = styled.div`
   margin-left: -10vw;
   div {
     width: 2px;
-    height: 100%;
+    height: 90%;
 
     background-color: rgba(0, 0, 0, 0.5);
     &:nth-of-type(1) {

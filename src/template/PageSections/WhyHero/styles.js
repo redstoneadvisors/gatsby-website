@@ -13,9 +13,11 @@ export const Container = styled.div`
 export const Left = styled.div`
   background-color: rgba(134, 166, 195, 0.45);
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 0;
   padding-left: 80px;
   position: absolute;
@@ -24,9 +26,13 @@ export const Left = styled.div`
   bottom: 0;
   z-index: 99;
   @media screen and (max-width: 925px) {
-    position: absolute;
-    bottom: 0;
+justify-content: flex-start;
     padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    padding-bottom: 300px;
+    text-align: center;
   }
 `;
 export const Right = styled.div`
@@ -53,6 +59,7 @@ export const Title = styled.h1`
   color: white;
   position: relative;
   width: max-content;
+
   &:after {
     content: "";
     background: #465569;
@@ -72,15 +79,28 @@ padding-top: 1rem;
     margin-bottom: 10px;
   }
 `;
-export const Quote = styled.p`
-  color: #737e8c;
-  font-size: 16px;
-  font-style: italic;
-  margin-bottom: 20px;
-  font-family: "PT Serif", serif;
-`;
 
 export const Quote2 = styled.p`
+   @media screen and (max-width: 925px) {
+    display: none;
+     &:first-of-type{
+      display: block;
+      rotate: initial;
+      width: 90%;
+      margin: 0 auto;
+      height: max-content;
+      font-size: 16px;;
+      padding: 2rem;
+     right:initial;
+      position: absolute;
+      z-index: 999;
+      bottom: 20px;
+      top: initial;
+      left: 50%;
+      transform: translate(-50%,-10%);
+
+     }
+    }
 position: absolute;
 top: ${({ order }) => (order == '3' ? '50%':order == '2'? '51%': '50%')};
 right: ${({ order }) => (order == '3' ? '70px':order == '2'? '85px': '75px')};

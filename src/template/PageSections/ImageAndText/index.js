@@ -23,7 +23,7 @@ const ImageAndText = ({ section: { elements }, orientation }) => {
             <source src={elements.image.value[0]?.url} type="video/mp4" />
           </video>
         ) : (
-          <StaticImage src={elements.image.value[0]?.url} dimensions={elements.image_dimensions?.value[0]?.codename} />
+          <StaticImage src={elements.image.value[0]?.url} dimensions={elements.image_dimensions?.value[0]?.codename} location={location.pathname}/>
         )}
       </Left>
       <Right layout={elements.layout.value[0].codename} location={location.pathname}>

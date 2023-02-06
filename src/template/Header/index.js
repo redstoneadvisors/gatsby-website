@@ -22,9 +22,14 @@ const Header = () => {
 
   const stupidFn = (component) =>{
     if(location.pathname == '/why-us' || location.pathname == '/what-we-do'){
-      return (<Link to="/" >
-              <img src={LogoWhite} alt="Redstone Advisors Inc." />
-            </Link>)
+      if(headerColor == 'white'){
+return component
+      }else{
+        return (<Link to="/" >
+        <img src={LogoWhite} alt="Redstone Advisors Inc." />
+      </Link>)
+      }
+     
     }else{
       if(location.pathname == '/'){
         if(headerColor == 'white'){

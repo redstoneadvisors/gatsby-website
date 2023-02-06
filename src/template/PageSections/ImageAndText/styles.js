@@ -37,6 +37,10 @@ export const StaticImage = styled.img`
     width: 100%;
     /* max-width: 690px; */
     /* border-radius: 0 100px 0 100px; */
+    height: 100%;
+    height: ${({location}) => location=='/who-we-are' ? 'auto' : '100%'};
+    object-fit: cover;
+    object-position: left;
     border-radius: 4px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     @media screen and (max-width: 800px) {

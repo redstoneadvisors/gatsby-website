@@ -14,7 +14,7 @@ import {
 const WhatHero = ({ section }) => {
   return (
     <Container>
-          <video muted={true} autoPlay={true} loop={true} poster={section.elements.poster?.value[0]?.url}>
+          <video muted={true}       playsInline={true} autoPlay={true} loop={true} poster={section.elements.poster?.value[0]?.url}>
             <source src={section.elements.multimedia?.value[0]?.url} type="video/mp4" />
           </video>
           <Layer>

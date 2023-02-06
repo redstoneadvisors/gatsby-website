@@ -6,10 +6,16 @@ export const Container = styled.section`
   position: relative;
   grid-template-columns: 1fr 1fr 1fr;
   /* border-bottom: 64px solid #a08c6b; */
-  padding: 20px 40px 10px 40px;
+ 
   align-items: center;
   @media screen and (max-width: 800px) {
+    padding: 80px 40px 50px 40px;
     grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  @media screen and (min-width: 800px) {
+    padding: 30px 40px 20px 40px;
   }
 `;
 export const Background = styled.img`
@@ -41,32 +47,42 @@ export const Border = styled.div`
 `;
 export const Left = styled.div`
   padding-left: 100px;
-  img{
-    width: 10%;
+  @media screen and (min-width: 800px) {
+
+img{
+  width: 60px;
+}
+
   }
   @media screen and (max-width: 800px) {
-    padding: 20px;
+    padding: 0px;
     margin: 0 auto;
+    img{
+      width: 50px;
+    }
   }
 `;
 export const Center = styled.div`
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
   @media screen and (max-width: 1330px) {
     display: block;
     padding: 30px 0;
     text-align: center;
   }
   p {
-    margin-bottom: 0;
     height: max-content;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
     color: #7c6b50;
-    font-size: 24px;
+    font-size: 26px;
+    margin-bottom: 0;
+  
+    @media screen and (max-width: 800px) {
+    font-size: 22px;
+    margin-bottom: 20px;
+    }
     font-family: "PT Serif", serif;
     line-height: 20px;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
@@ -75,6 +91,7 @@ export const Center = styled.div`
     align-items: center;
     @media screen and (max-width: 1330px) {
       font-weight: 900;
+      margin-bottom: 20px;
       /* margin-left: 1rem; */
       opacity: 0.85;
       &:first-of-type {

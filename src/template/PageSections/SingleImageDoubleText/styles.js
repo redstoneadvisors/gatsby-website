@@ -10,6 +10,9 @@ export const Container = styled.div`
     grid-template-columns: 1fr;
     margin-bottom: 100px;
   }
+  @media screen and (max-width: 600px) {
+margin-bottom: 40px;
+  }
 `;
 
 export const Left = styled.div`
@@ -41,6 +44,9 @@ width: 100%;
   @media screen and (max-width: 1080px) {
     padding: 50px 40px;
   }
+  @media screen and (max-width: 600px) {
+padding-bottom: 0px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -61,7 +67,10 @@ export const Title = styled.h2`
 `;
 export const Description = styled.p`
   font-size: 18px;
-  color: #888888;
+  color: #757575;
   font-weight: 500;
   line-height: 2.5rem;
+  @media screen and (max-width: 600px) {
+font-size:16px;
+  }
 `;

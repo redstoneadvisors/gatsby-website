@@ -81,7 +81,7 @@ export const NavLink = styled(Link)`
   font-size: 12px;
   position: relative;
   text-transform: uppercase;
-  font-family: "Poppins", serif;
+  font-family: "Poppins", serif !important;
   span{
     color: rgba(0,0,0,1);
   }
@@ -101,6 +101,9 @@ width: 100%;
 margin: 0;
 padding:0;
 padding-top: 50px;;
+@media screen and (max-width: 600px) {
+   padding-top: 10px;
+  }
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: max-content max-content max-content;

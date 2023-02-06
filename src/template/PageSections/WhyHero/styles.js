@@ -34,6 +34,10 @@ justify-content: flex-start;
     padding-bottom: 300px;
     text-align: center;
   }
+  @media screen and (max-width: 600px) {
+justify-content: flex-start;
+padding-top: 100px;
+  }
 `;
 export const Right = styled.div`
   height: 100%;

@@ -12,7 +12,7 @@ const WhyHero = ({ section }) => {
         <Description><RichTextElement value={section.elements.description_rt.value}></RichTextElement></Description>
       </Left>
       <Right>
-      <video muted={true} autoPlay={true} loop={true}>
+      <video muted={true} autoPlay={true} loop={true}       playsInline={true}>
             <source src={section.elements.hero.value[0].url} type="video/mp4" />
           </video>
         <Quote2 order={1}>{section.elements.quote.value}<span>-{section.elements.author.value}-</span></Quote2>

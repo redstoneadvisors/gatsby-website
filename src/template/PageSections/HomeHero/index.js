@@ -29,6 +29,7 @@ const HomeHero = ({ section: { elements } }) => {
         height="100%"
         controls={false}
         autoPlay={true}
+        playsInline={true}
         muted={true}
         loop={true}
       >
@@ -39,15 +40,15 @@ const HomeHero = ({ section: { elements } }) => {
           <img src={Logo} />
         </div>
       </Left>
-      <Right>
+      <Right >
         <Border>
     
         <Intro>{elements.intro.value}</Intro>
         <SubIntro>{elements.sub_intro.value}</SubIntro>
-        <Graphic>
+        <Graphic className="text-focus-in">
           <img src={elements.graphic.value[0].url} />
         </Graphic>
-        <Tagline>{elements.tagline.value}</Tagline>
+        <Tagline className="text-focus-in">{elements.tagline.value}</Tagline>
         </Border>
       </Right>
       

@@ -23,6 +23,9 @@ export const Quote = styled.h2`
   color:rgba(255,255,255,.8);
   padding: 0 0 0 0;
   max-width: 80%;
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+  }
   margin: 0 auto;
   opacity: 0.9;
 `;

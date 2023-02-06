@@ -15,6 +15,9 @@ export const Container = styled.div`
     position: relative;
     font-family: "Cinzel", serif;
     max-width: 60%;
+    @media screen and (max-width: 600px) {
+max-width: 100%;
+    }
     margin: 0 auto;
     &:before {
       content: "";

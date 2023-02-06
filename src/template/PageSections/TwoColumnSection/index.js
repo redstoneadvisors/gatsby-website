@@ -6,9 +6,9 @@ const TwoColumnSection = ({section}) => {
     console.log("y", section)
   return(
     <Container>
-        {  section.elements.content.value.map(el =>{
+        {  section.elements.content.value.map((el, index) =>{
     return (
-        <ImageAndText section={el} orientation="two-column"/>
+        <ImageAndText section={el} index={index} orientation="two-column"/>
      )
   })}
     </Container>

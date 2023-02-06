@@ -7,6 +7,7 @@ export const Container = styled.div`
   @media screen and (max-width: 1080px) {
     margin: 0;
   }
+
 `;
 export const Background = styled.div`
   background-color: #4c4e56;
@@ -15,6 +16,9 @@ export const Background = styled.div`
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 2rem;
   padding: 75px;
+  @media screen and (max-width: 600px) {
+   padding: 40px
+  }
   @media screen and (max-width: 1080px) {
     grid-template-columns: 1fr;
     row-gap: 74px;

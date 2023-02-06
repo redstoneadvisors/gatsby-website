@@ -17,6 +17,9 @@ export const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 80px;
+  @media screen and (max-width: 600px) {
+   padding: 0 40px;
+  }
   /* padding-left: 80px; */
 `;
 
@@ -50,6 +53,9 @@ export const HeroTexture = styled.img`
 export const Title = styled.h1`
   font-family: "PT Serif", serif;
   font-size: 60px;
+  @media screen and (max-width: 600px) {
+  font-size: 50px;
+  }
   font-weight: 700;
 
   @media screen and (max-width: 1080px) {

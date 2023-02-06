@@ -22,7 +22,10 @@ export const Top = styled.div`
   }
   margin-bottom: 25px;
   @media screen and (max-width: 800px) {
-    margin-bottom: 25px;
+    margin-bottom: 55px;
+    img{
+      max-width: 80%;
+    }
   }
 `;
 export const Middle = styled.div`

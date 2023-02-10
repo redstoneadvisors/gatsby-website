@@ -35,7 +35,9 @@ return component
         if(headerColor == 'white'){
           return component
         }else{
-          return null
+          return <Link to="/" >
+          <img src={LogoWhite} alt="Redstone Advisors Inc." />
+        </Link>
         }
       }
       if(headerColor == 'white'){
@@ -151,6 +153,7 @@ return component
               ? { color: "#C7AE86", cursor: "pointer", fontSize:'1.2rem' }
               : { color: "#fff", cursor: "pointer", fontSize:'1.2rem' }}
               onClick={showDrawer}
+              
             />
           </li>
         <li>

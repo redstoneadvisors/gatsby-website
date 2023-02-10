@@ -43,6 +43,14 @@ export const Navbar = styled.nav`
           margin-left: auto;
         }
       }
+      svg{
+  &:hover{
+    transform: scale(1.1);
+  path{
+    fill:#c7ae86;
+  }
+  }
+}
     }
   }
 `;
@@ -138,7 +146,7 @@ box-shadow:  20px 20px 60px #bebebe,
   border: 4px solid;
   border-image: repeating-linear-gradient(135deg,#c7ae86 0 5px,#c7ae86 0 10px,#c7ae86 0 15px) 3;
   -webkit-mask: 
-    conic-gradient(from 180deg at top 4px right 4px, #0000 90deg,#000 0)
+conic-gradient(from 180deg at top 4px right 4px, #0000 90deg,#000 0)
      var(--_i,200%) 0  /200% var(--_i,4px) border-box no-repeat,
     conic-gradient(at bottom 4px left  4px,  #0000 90deg,#000 0)
      0   var(--_i,200%)/var(--_i,4px) 200% border-box no-repeat,
@@ -154,6 +162,7 @@ box-shadow:  20px 20px 60px #bebebe,
   color: #CC333F;
   transition: .2s, -webkit-mask-size .2s .2s;
    }
+
    
   }
 `;

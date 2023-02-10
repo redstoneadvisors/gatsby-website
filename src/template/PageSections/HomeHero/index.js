@@ -2,17 +2,19 @@ import React from "react";
 import { graphql } from "gatsby";
 import {
   Container,
-  Left,
+  Overlay,
   Right,
   Intro,
   SubIntro,
   Tagline,
-  Graphic,
+Border,
   Topo,
-  Border
+  LogoH,
+  Line,
+  CTA
 } from "./styles";
 import video from "../../../images/car3.mp4";
-import Logo from "../../../images/logo-trans.svg";
+import Logo from "../../../images/Subtraction 3.svg";
 import Top from "../../../images/top.svg";
 import bg from "../../../images/sq-topo-g.svg";
 const HomeHero = ({ section: { elements } }) => {
@@ -35,23 +37,29 @@ const HomeHero = ({ section: { elements } }) => {
       >
         <source src={video} type="video/mp4" autoPlay={true} />
       </video>
-      <Left background={Top}>
+      <Overlay background={Top}>
         <div>
-          <img src={Logo} />
+         
         </div>
-      </Left>
+      </Overlay>
       <Right >
-        <Border>
-    
-        <Intro>{elements.intro.value}</Intro>
-        <SubIntro>{elements.sub_intro.value}</SubIntro>
-        <Graphic className="text-focus-in">
+        {/* <Border> */}
+     
+  
+   <div style={{alignSelf:'center', justifySelf:'center', gridColumn:2}}>
+   {/* <Border img={Logo}>
+   <LogoH src={Logo} />
+   </Border> */}
+   <Intro className="text-focus-in">{elements.intro.value}</Intro>
+        <SubIntro className="text-focus-in-1">{elements.sub_intro.value}</SubIntro>
+        {/* <Graphic className="text-focus-in">
           <img src={elements.graphic.value[0].url} />
-        </Graphic>
-        <Tagline className="text-focus-in">{elements.tagline.value}</Tagline>
-        </Border>
+        </Graphic> */}
+        <Tagline className="text-focus-in-2" >{elements.tagline.value}</Tagline>
+        </div>
+{/* <Line/> */}
       </Right>
-      
+      <CTA href="#see-more" className="text-focus-in">SEE MORE</CTA>
     </Container>
   );
 };

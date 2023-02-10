@@ -1,7 +1,7 @@
-import React, { useRef, useCallback, useEffect } from "react";
+import React, {useRef, useCallback, useEffect} from 'react'
 import { graphql } from "gatsby";
 import { RichTextElement } from "@kentico/gatsby-kontent-components";
-import "../../../styles/global.css";
+import '../../../styles/global.css'
 import {
   Container,
   Left,
@@ -10,98 +10,83 @@ import {
   Description,
   Cta,
   Tagline,
-  StaticImage,
+  StaticImage
 } from "./styles";
-import { useLocation } from "@reach/router";
-import { useInView } from "react-intersection-observer";
+import { useLocation } from '@reach/router';
+import {useInView} from 'react-intersection-observer'
 const ImageAndText = ({ section: { elements }, orientation, index }) => {
-  const leftRef = useRef();
-  const rightRef = useRef();
+const leftRef = useRef()
+const rightRef = useRef()
 
-  const [inViewRef, inView] = useInView({ rootMargin: "100px", threshold: 0 });
-  const location = useLocation();
+  const [inViewRef, inView] = useInView({rootMargin: '40%', threshold: 0})
+  const location = useLocation()
 
   const setRefs = useCallback(
-    (node) => {
-      rightRef.current = node;
-      inViewRef(node);
-    },
-    [inViewRef]
-  );
-  useEffect(() => {
-    if (inView) {
-      if (elements.layout.value[0].codename == "left") {
-        leftRef.current.style.opacity = "1";
-        leftRef.current.classList.add("slide-in-left");
-        rightRef.current.style.opacity = "1";
-        rightRef.current.classList.add("slide-in-right");
-      } else if (elements.layout.value[0].codename == "right") {
-        leftRef.current.style.opacity = "1";
-        leftRef.current.classList.add("slide-in-right");
-        rightRef.current.style.opacity = "1";
-        rightRef.current.classList.add("slide-in-left");
-      } else if (elements.layout.value[0].codename == "stacked")
-        if (index == 0) {
-          leftRef.current.style.opacity = "1";
-          leftRef.current.classList.add("slide-in-left");
-          rightRef.current.style.opacity = "1";
-          rightRef.current.classList.add("slide-in-left");
-        } else if (index == 1) {
-          leftRef.current.style.opacity = "1";
-          leftRef.current.classList.add("slide-in-right");
-          rightRef.current.style.opacity = "1";
-          rightRef.current.classList.add("slide-in-right");
-        } else {
-          leftRef.current.style.opacity = "1";
-          leftRef.current.classList.add("slide-in-right");
-          rightRef.current.style.opacity = "1";
-          rightRef.current.classList.add("slide-in-left");
-        }
-    }
-  }, [inView]);
+		(node) => {
+			rightRef.current = node
+			inViewRef(node)
+		},
+		[inViewRef]
+	)
+	useEffect(() => {
+		if (inView) {
+      if(elements.layout.value[0].codename == 'left'){
+        leftRef.current.style.opacity = '1'
+        leftRef.current.classList.add('slide-in-left')
+        rightRef.current.style.opacity = '1'
+        rightRef.current.classList.add('slide-in-right')
+      }
+      else if(elements.layout.value[0].codename == 'right'){
+        leftRef.current.style.opacity = '1'
+        leftRef.current.classList.add('slide-in-right')
+        rightRef.current.style.opacity = '1'
+        rightRef.current.classList.add('slide-in-left')
+      }
+      else if(elements.layout.value[0].codename == 'stacked')
+          if(index == 0){
+            leftRef.current.style.opacity = '1'
+            leftRef.current.classList.add('slide-in-left')
+            rightRef.current.style.opacity = '1'
+            rightRef.current.classList.add('slide-in-left')
+          }else if (index == 1){
+            leftRef.current.style.opacity = '1'
+            leftRef.current.classList.add('slide-in-right')
+            rightRef.current.style.opacity = '1'
+            rightRef.current.classList.add('slide-in-right')
+          }else{
+            leftRef.current.style.opacity = '1'
+            leftRef.current.classList.add('slide-in-right')
+            rightRef.current.style.opacity = '1'
+            rightRef.current.classList.add('slide-in-left')
+          }
 
+
+
+	     
+		}
+	}, [inView])
+
+  
   return (
-    <Container location={location.pathname}>
+    <Container  location={location.pathname} id={location.pathname === '/' ? 'see-more' : null}>
       <Left layout={elements.layout.value[0].codename} ref={leftRef}>
-        {orientation == "two-column" ||
-        elements.image_dimensions?.value[0]?.codename == "normal" ||
-        elements.layout.value[0].codename == "stacked" ? (
-          <Title orientation={orientation}>{elements.title.value}</Title>
-        ) : null}
+      {orientation=='two-column' || elements.image_dimensions?.value[0]?.codename == "normal" || elements.layout.value[0].codename == 'stacked' ?  <Title orientation={orientation}>{elements.title.value}</Title> : null}
         {elements.image.value[0]?.type == "video/mp4" ? (
-          <video
-            muted={false}
-            autoPlay={false}
-            controls
-            poster={elements.poster_image.value[0]?.url}
-          >
+          <video muted={false} autoPlay={false} controls poster={elements.poster_image.value[0]?.url}>
             <source src={elements.image.value[0]?.url} type="video/mp4" />
           </video>
         ) : (
-          <StaticImage
-            src={elements.image.value[0]?.url}
-            dimensions={elements.image_dimensions?.value[0]?.codename}
-            location={location.pathname}
-          />
+          <StaticImage src={elements.image.value[0]?.url} dimensions={elements.image_dimensions?.value[0]?.codename} location={location.pathname}/>
         )}
       </Left>
-      <Right
-        ref={setRefs}
-        layout={elements.layout.value[0].codename}
-        location={location.pathname}
-      >
-        {(orientation == "two-column" &&
-          elements.image_dimensions?.value[0]?.codename == "normal") ||
-        location.pathname == "/" ? (
-          <Title orientation={orientation} location={location.pathname}>
-            {elements.title.value}
-          </Title>
-        ) : null}
+      <Right ref={setRefs} layout={elements.layout.value[0].codename} location={location.pathname}>
+      {orientation=='two-column' && elements.image_dimensions?.value[0]?.codename  == "normal" || location.pathname == '/' ? <Title orientation={orientation} location={location.pathname}>{elements.title.value}</Title> :null  }
         <Description orientation={orientation} location={location.pathname}>
           <RichTextElement value={elements.description.value}></RichTextElement>
         </Description>
         <Tagline>{elements.tagline.value}</Tagline>
         {elements.cta.value[0] && (
+          
           <Cta
             to={
               "/" +

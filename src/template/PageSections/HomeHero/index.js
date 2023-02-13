@@ -7,14 +7,12 @@ import {
   Intro,
   SubIntro,
   Tagline,
-Border,
   Topo,
-  LogoH,
-  Line,
+LogoOverlay,
   CTA
 } from "./styles";
 import video from "../../../images/car3.mp4";
-import Logo from "../../../images/Subtraction 3.svg";
+import Logo from "../../../images/logo-w.svg";
 import Top from "../../../images/top.svg";
 import bg from "../../../images/sq-topo-g.svg";
 const HomeHero = ({ section: { elements } }) => {
@@ -24,6 +22,7 @@ const HomeHero = ({ section: { elements } }) => {
   };
   return (
     <Container>
+      
       <Topo src={bg} />
       <video
         ref={videoRef}
@@ -42,24 +41,19 @@ const HomeHero = ({ section: { elements } }) => {
          
         </div>
       </Overlay>
-      <Right >
-        {/* <Border> */}
-     
-  
-   <div style={{alignSelf:'center', justifySelf:'center', gridColumn:2}}>
-   {/* <Border img={Logo}>
-   <LogoH src={Logo} />
-   </Border> */}
-   <Intro className="text-focus-in">{elements.intro.value}</Intro>
-        <SubIntro className="text-focus-in-1">{elements.sub_intro.value}</SubIntro>
-        {/* <Graphic className="text-focus-in">
-          <img src={elements.graphic.value[0].url} />
-        </Graphic> */}
-        <Tagline className="text-focus-in-2" >{elements.tagline.value}</Tagline>
+      <Right>
+      <LogoOverlay className="slide-in-left">
+        <img src={Logo}/>
+      </LogoOverlay>
+        <div style={{alignSelf:'center', justifySelf:'center', gridColumn:2, padding:'0 60px'}}>
+          <Intro className="text-focus-in">{elements.intro.value}</Intro>
+          <SubIntro className="text-focus-in-1">{elements.sub_intro.value}</SubIntro>
+          <Tagline className="text-focus-in-2" >{elements.tagline.value}</Tagline>
+          <CTA href="#see-more" className="text-focus-in">SEE MORE</CTA>
         </div>
-{/* <Line/> */}
+       
       </Right>
-      <CTA href="#see-more" className="text-focus-in">SEE MORE</CTA>
+   
     </Container>
   );
 };

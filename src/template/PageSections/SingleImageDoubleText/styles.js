@@ -70,7 +70,16 @@ export const Description = styled.p`
   color: #757575;
   font-weight: 500;
   line-height: 2.5rem;
+  a{
+  color: inherit;
+  text-decoration: underline;
+  &:hover, &:focus{
+    color: black;
+   
+  }
+}
   @media screen and (max-width: 600px) {
 font-size:16px;
+
   }
 `;

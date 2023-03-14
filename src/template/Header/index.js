@@ -19,7 +19,7 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
 
   function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
+    const { innerWidth: width, innerHeight: height } = window ? window : null;
     return {
       width,
       height,

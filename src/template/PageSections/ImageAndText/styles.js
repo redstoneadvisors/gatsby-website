@@ -7,10 +7,10 @@ export const Container = styled.section`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: ${({ location }) => (location == "/" ? '8rem' : '2rem')};
+  gap: ${({ location }) => (location == "/" ? '5vw' : '2rem')};
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    padding: 50px 0;
+    padding: 2rem 0;
     gap: 0;
   }
 `;
@@ -39,12 +39,13 @@ export const StaticImage = styled.img`
     /* border-radius: 0 100px 0 100px; */
     height: 100%;
     height: ${({location}) => location=='/who-we-are' || location == '/what-we-do'? 'auto' : '100%'};
+    min-height: 300px;
     object-fit: cover;
     object-position: left;
     border-radius: 4px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     @media screen and (max-width: 800px) {
-
+      object-position: center;
     }
 
 `
@@ -85,7 +86,8 @@ margin: 0;
 padding: 0;
 font-size: ${({ orientation }) => (orientation == "two-column" ? '32px' : '48px')};
 @media screen and (max-width: 1080px) {
-  font-size: ${({ orientation }) => (orientation == "two-column" ? '24px' : '32px')};
+  font-size: ${({ orientation }) => (orientation == "two-column" ? '32px' : '32px')};
+  margin: ${({ location }) => (location == "/" ? '0 0 2rem 0' : ' 0 auto 3rem auto;')};
   }
   font-weight: bold;
   position: relative;
@@ -106,7 +108,10 @@ export const Description = styled.div`
   color: #989898;
   font-family: "PT Serif", serif;
   line-height: 35px;
-  padding: ${({ orientation, location }) => (orientation == "two-column" ? '2rem 4rem' : location=='/' ?  '0rem'    :'0 4rem')};
+  padding: ${({ orientation, location }) => (orientation == "two-column" ? '2rem 2rem' : location=='/' ?  '0rem'    :'0 4rem')};
+  @media screen and (max-width: 800px) {
+    padding: ${({ orientation, location }) => (orientation == "two-column" ? '0' : location=='/' ?  '0rem'    :'0rem')};
+}
   p {
     letter-spacing: 0.02rem;
  
@@ -116,8 +121,11 @@ export const Description = styled.div`
     margin-bottom: 1.2rem;
     padding: 0;
   }
+  em{
+   
+  }
   @media screen and (max-width: 800px) {
-    padding: 20px;
+  
   }
 `;
 export const Cta = styled(Link)`

@@ -21,7 +21,7 @@ const WhoHero = ({ section }) => {
      
         <Title>{section.elements.title.value}</Title>
         <Description>
-          <span>{section.elements.description_2.value}</span>
+        <RichTextElement value={section.elements.description_rt.value} />
         </Description>
         <Description>
           <span>{section.elements.description_3.value}</span>
@@ -33,7 +33,7 @@ const WhoHero = ({ section }) => {
           <HeroTexture src={section.elements.texture.value[0].url} />
         </Hero>
         <Quote>
-          <RichTextElement value={section.elements.description_rt.value} />
+          <RichTextElement value={section.elements.quote.value} />
         </Quote>
       </Right>
     </Container>
@@ -49,10 +49,10 @@ export const WhoHeroFragment = graphql`
       codename
     }
     elements {
-      description_rt {
+      quote{
         value
       }
-      description {
+      description_rt {
         value
       }
       description_2 {

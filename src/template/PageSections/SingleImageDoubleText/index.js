@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { RichTextElement } from "@kentico/gatsby-kontent-components";
 import { Container, Left, Right, Title, Description } from "./styles";
 
 const SingleImageDoubleText = ({ section }) => {
@@ -23,7 +24,7 @@ const SingleImageDoubleText = ({ section }) => {
             {section.elements.second_title.value}
           </Title>
           <Description layout={position} order={2}>
-            {section.elements.second_description.value}
+          <RichTextElement value={section.elements.second_description_rt.value} />
           </Description>
         </div>
       </Right>
@@ -52,6 +53,9 @@ export const SingleImageDoubleTextFragment = graphql`
         value
       }
       second_description {
+        value
+      }
+      second_description_rt{
         value
       }
       hero {

@@ -58,6 +58,9 @@ export const MidLeft = styled.div`
     li {
       white-space: nowrap;
       font-weight: 600;
+      a{
+        color: inherit;
+      }
     }
   }
 `;

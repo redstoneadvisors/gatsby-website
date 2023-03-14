@@ -4,6 +4,7 @@ export const Container = styled.section`
   background-color: #86a1c3;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0px 11px 15px -10px rgba(0,0,0,.3), inset 0px -11px 15px -10px rgba(0,0,0,.3);
 `;
 export const Inner = styled.div`
   max-width: 1650px;
@@ -19,7 +20,7 @@ export const Inner = styled.div`
 export const Quote = styled.h2`
   font-size: 23px;
   font-family: "Cinzel",serif;
-  font-style: italic;
+
   color:rgba(255,255,255,.8);
   padding: 0 0 0 0;
   max-width: 80%;
@@ -31,8 +32,11 @@ export const Quote = styled.h2`
 `;
 export const Author = styled.p`
   text-align: center;
-  padding-top: 10px;
-  opacity: 0.7;
+  padding-top: 15px;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+
+  opacity: 1;
   color: rgb(92, 112, 137);
 `;
 export const Ellipsis = styled.div`
@@ -46,13 +50,15 @@ export const Ellipsis = styled.div`
 
 export const Compass = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 1%;
   z-index: 99;
   opacity: 0.1;
   height: 100%;
+  transform: translateY(-40%);
 
   img {
-    height: 100%;
+    height: 270%;
+
   }
 `;

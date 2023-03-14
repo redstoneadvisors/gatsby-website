@@ -23,7 +23,6 @@ export const Bios = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  row-gap: 115px;
   column-gap: 65px;
   margin-bottom: 100px;
   @media screen and (max-width: 800px) {
@@ -37,6 +36,9 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   padding-top: 100px;
+  @media screen and (max-width: 800px) {
+padding-top: 0;
+  }
 `;
 
 export const AccentLines = styled.div`

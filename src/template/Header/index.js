@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Contact, NavLink, NavList, Active } from "./styles";
+import { Navbar, Contact, NavLink, NavList, Active, Debug } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import home from '../../images/Large/house.svg'
 import briefcase from '../../images/Large/briefcase.svg'
@@ -19,6 +19,33 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
 
 
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+  
+  function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
+  
+    React.useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+    return windowDimensions;
+  }
+  const { height, width } = useWindowDimensions();
+
+
+
+
 
   const stupidFn = (component) =>{
     if(location.pathname == '/why-us' || location.pathname == '/what-we-do'){
@@ -35,7 +62,9 @@ return component
         if(headerColor == 'white'){
           return component
         }else{
-          return null
+          return <Link to="/" >
+          <img src={LogoWhite} alt="Redstone Advisors Inc." />
+        </Link>
         }
       }
       if(headerColor == 'white'){
@@ -77,6 +106,9 @@ return component
   }
   return (
     <>
+       {!process.env.NODE_ENV || process.env.NODE_ENV === 'development' && <Debug>
+        {width + 'px'}
+      </Debug>}
       <Drawer
         placement="left"
         onClose={onClose}
@@ -151,6 +183,7 @@ return component
               ? { color: "#C7AE86", cursor: "pointer", fontSize:'1.2rem' }
               : { color: "#fff", cursor: "pointer", fontSize:'1.2rem' }}
               onClick={showDrawer}
+              
             />
           </li>
         <li>

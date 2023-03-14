@@ -63,6 +63,7 @@ const Master = ({headerData, footerData, children, location}) => {
 					href="https://fonts.gstatic.com"
 					crossorigin
 				/>
+				<meta name="theme-color" content="#c7ae86"/>
 
 			</Helmet>
 			<ThemeWrapper>

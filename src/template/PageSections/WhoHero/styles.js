@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 3fr 5fr;
-  height: 100vh;
+  min-height: 100vh;
   max-height: 1080px;
   gap: 2rem;
   @media screen and (max-width: 1080px) {
     grid-template-columns: 1fr;
     margin-top: 100px;
+    margin-bottom: 100px;
     gap: 0rem;
   }
 `;
@@ -82,7 +83,9 @@ export const Description = styled.p`
   font-family: "PT Serif", serif;
   font-size: 18px;
   max-width: 450px;
-
+strong{
+  color: #4c4e56;
+}
   color: #757575;
   line-height: 40px;
   @media screen and (max-width: 1080px) {

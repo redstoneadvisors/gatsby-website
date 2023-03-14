@@ -4,6 +4,7 @@ export const Navbar = styled.nav`
   margin: 0 auto;
   display: block;
   padding: 25px 80px;
+  border-bottom: ${(props) => props.background == 'white' && ' 1px solid rgba(211,211,211,.5)' };
   /* padding: ${({background}) => background == 'white'? '20px 80px': '30px 80px'}; */
   @media screen and (max-width: 800px) {
     padding: 20px 30px;
@@ -43,6 +44,14 @@ export const Navbar = styled.nav`
           margin-left: auto;
         }
       }
+      svg{
+  &:hover{
+    transform: scale(1.1);
+  path{
+    fill:#c7ae86;
+  }
+  }
+}
     }
   }
 `;
@@ -138,7 +147,7 @@ box-shadow:  20px 20px 60px #bebebe,
   border: 4px solid;
   border-image: repeating-linear-gradient(135deg,#c7ae86 0 5px,#c7ae86 0 10px,#c7ae86 0 15px) 3;
   -webkit-mask: 
-    conic-gradient(from 180deg at top 4px right 4px, #0000 90deg,#000 0)
+conic-gradient(from 180deg at top 4px right 4px, #0000 90deg,#000 0)
      var(--_i,200%) 0  /200% var(--_i,4px) border-box no-repeat,
     conic-gradient(at bottom 4px left  4px,  #0000 90deg,#000 0)
      0   var(--_i,200%)/var(--_i,4px) 200% border-box no-repeat,
@@ -154,6 +163,7 @@ box-shadow:  20px 20px 60px #bebebe,
   color: #CC333F;
   transition: .2s, -webkit-mask-size .2s .2s;
    }
+
    
   }
 `;
@@ -163,4 +173,17 @@ height: 8px;
 border-radius: 100%;
 background-color: #c7ae86;
 margin: 0 auto;
+`
+export const Debug = styled.div`
+position: fixed;
+bottom: 1rem;
+right: 1rem;
+width: auto;
+height: auto;
+background-color: white;
+padding: .2rem 1rem;
+border-radius: 100px;
+border: 1px solid rgba(211,211,211);
+z-index: 99999999;
+color: rgba(200,200,200);
 `

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { RichTextElement } from "@kentico/gatsby-kontent-components";
 import { Container, Top, Middle, Bottom, MidLeft, MidRight } from "./styles";
 import Logo from "../../images/redstone-footer-logo.svg";
@@ -66,10 +66,10 @@ const Footer = () => {
           <div>
             <h2>Navigation</h2>
             <ul>
-              <li>Who We Are</li>
-              <li>What We Do</li>
-              <li>Why Redstone</li>
-              <li>Contact Us</li>
+              <li><Link to="/who-we-are">Who We Are</Link></li>
+              <li><Link to="/what-we-do">What We Do</Link></li>
+              <li><Link to="/why-us">Why Us</Link></li>
+              <li><Link to="/contact-us">Contact Us</Link></li>
             </ul>
           </div>
         </MidLeft>

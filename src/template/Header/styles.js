@@ -4,7 +4,8 @@ export const Navbar = styled.nav`
   margin: 0 auto;
   display: block;
   padding: 25px 80px;
-  /* padding: ${({background}) => background == 'white'? '20px 80px': '30px 80px'}; */
+  border-bottom: ${(props) => props.background === 'white' && ' 1px solid rgba(211,211,211,.5)' };
+  /* padding: ${({background}) => background === 'white'? '20px 80px': '30px 80px'}; */
   @media screen and (max-width: 800px) {
     padding: 20px 30px;
   }
@@ -59,9 +60,9 @@ export const Contact = styled(Link)`
 
   font-family: "Poppins", serif;
   text-transform: uppercase;
-  border: ${({ headerColor, location }) => (headerColor == "white"|| location != '/' && location != '/what-we-do' && location != '/why-us'? '3px solid #c7ae86' : '2px solid white')};
+  border: ${({ headerColor, location }) => (headerColor === "white"|| location != '/' && location != '/what-we-do' && location != '/why-us'? '3px solid #c7ae86' : '2px solid white')};
   /* border: 2px solid white; */
-  color: ${({ headerColor, location }) => (headerColor == "white"|| location != '/' && location != '/what-we-do' && location != '/why-us'? '#c7ae86' : 'white')};
+  color: ${({ headerColor, location }) => (headerColor === "white"|| location != '/' && location != '/what-we-do' && location != '/why-us'? '#c7ae86' : 'white')};
   border-radius: 20px;
   height: 36px;
   display: inline-flex;
@@ -172,4 +173,17 @@ height: 8px;
 border-radius: 100%;
 background-color: #c7ae86;
 margin: 0 auto;
+`
+export const Debug = styled.div`
+position: fixed;
+bottom: 1rem;
+right: 1rem;
+width: auto;
+height: auto;
+background-color: white;
+padding: .2rem 1rem;
+border-radius: 100px;
+border: 1px solid rgba(211,211,211);
+z-index: 99999999;
+color: rgba(200,200,200);
 `

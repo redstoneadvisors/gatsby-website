@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import boat from "../../../images/boat.svg";
 import {
+  Wrapper,
   Container,
   Left,
   Center,
@@ -13,7 +14,7 @@ import {
 } from "./styles";
 const GoldBanner = ({ section: { elements } }) => {
   return (
-    <>
+    <Wrapper>
       <Container>
         <Background src={boat} />
         <Left>
@@ -39,7 +40,7 @@ const GoldBanner = ({ section: { elements } }) => {
           <span>{elements.cta_text.value}</span>
         </Border>
       </Link>
-    </>
+    </Wrapper>
   );
 };
 

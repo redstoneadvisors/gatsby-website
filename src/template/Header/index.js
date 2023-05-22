@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Contact, NavLink, NavList, Active } from "./styles";
+import { Navbar, Contact, NavLink, NavList, Active, Debug } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import home from '../../images/Large/house.svg'
 import briefcase from '../../images/Large/briefcase.svg'
@@ -19,10 +19,36 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
 
 
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+  
+  function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
+  
+    React.useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+    return windowDimensions;
+  }
+  const { height, width } = useWindowDimensions();
+
+
+
 
   const stupidFn = (component) =>{
-    if(location.pathname == '/why-us' || location.pathname == '/what-we-do'){
-      if(headerColor == 'white'){
+    if(location.pathname === '/why-us' || location.pathname === '/what-we-do'){
+      if(headerColor === 'white'){
 return component
       }else{
         return (<Link to="/" >
@@ -31,8 +57,8 @@ return component
       }
      
     }else{
-      if(location.pathname == '/'){
-        if(headerColor == 'white'){
+      if(location.pathname === '/'){
+        if(headerColor === 'white'){
           return component
         }else{
           return <Link to="/" >
@@ -40,7 +66,7 @@ return component
         </Link>
         }
       }
-      if(headerColor == 'white'){
+      if(headerColor === 'white'){
         return component
       }
       if(location.pathname != '/'){
@@ -79,6 +105,9 @@ return component
   }
   return (
     <>
+       {!process.env.NODE_ENV || process.env.NODE_ENV === 'production' && <Debug>
+        {width + 'px' +  height +'px'}
+      </Debug>}
       <Drawer
         placement="left"
         onClose={onClose}
@@ -94,35 +123,35 @@ return component
             <img src={home} className="nav-icon" />
             <span>Home</span>
           </li>
-          {location.pathname == '/' && <Active/>}
+          {location.pathname === '/' && <Active/>}
           </NavLink>
           <NavLink to="/who-we-are">
           <li>
           <img src={woman} className="nav-icon" />
             <span>Who We Are</span>
           </li>
-          {location.pathname == '/who-we-are' && <Active/>}
+          {location.pathname === '/who-we-are' && <Active/>}
           </NavLink>
           <NavLink to="/what-we-do">
           <li>
             <img src={briefcase} className="nav-icon" />
             <span>What We Do</span>
           </li>
-          {location.pathname == '/what-we-do' && <Active/>}
+          {location.pathname === '/what-we-do' && <Active/>}
           </NavLink>
           <NavLink to="/why-us">
           <li>
           <img src={building} className="nav-icon" />
           <span>Why Us</span>
           </li>
-          {location.pathname == '/why-us' && <Active/>}
+          {location.pathname === '/why-us' && <Active/>}
           </NavLink>
           <NavLink to="/contact-us">
           <li>
             <img src={envelope} className="nav-icon" />
             <span>Contact Us</span>
           </li>
-          {location.pathname == '/contact-us' && <Active/>}
+          {location.pathname === '/contact-us' && <Active/>}
           </NavLink>
           {/* <div style={{ height: '300px', width: '100%', gridColumn:'1/3'}}>
       <GoogleMapReact
@@ -149,7 +178,7 @@ return component
           <li>
             <FontAwesomeIcon
               icon={faBars}
-              style={   headerColor == "white" || (location.pathname != '/' && location.pathname != '/what-we-do' && location.pathname != '/why-us')
+              style={   headerColor === "white" || (location.pathname != '/' && location.pathname != '/what-we-do' && location.pathname != '/why-us')
               ? { color: "#C7AE86", cursor: "pointer", fontSize:'1.2rem' }
               : { color: "#fff", cursor: "pointer", fontSize:'1.2rem' }}
               onClick={showDrawer}

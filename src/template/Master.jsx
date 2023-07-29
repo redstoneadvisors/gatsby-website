@@ -28,7 +28,7 @@ const Master = ({headerData, footerData, children, location}) => {
 	`);
 	const [menuIsOpen, setMenuisOpen] = React.useState(false);
 	React.useEffect(() => {
-		if (menuIsOpen == true) {
+		if (menuIsOpen === true) {
 			document.body.style.overflow = 'hidden';
 		}
 		return () => (document.body.style.overflow = 'unset');

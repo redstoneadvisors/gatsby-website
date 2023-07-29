@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 export const Container = styled.div`
+  --app-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  /* @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr;
-  } */
-  border-bottom: 10px solid  #c7ae86;;
-  height: 100vh;
-  max-height: 1080px;
+  /* border-bottom: 10px solid #c7ae86; */
+  min-height: 100vh;
+  @media screen and (max-width: 500px) {
+    border-bottom: none;
+  }
+  @media screen and (max-width: 499px) {
+    min-height: fill-available;
+    border-bottom: none;
+  }
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-  background-color: rgba(0, 0, 0, 0.3);
-  position: relative;
+
   overflow: hidden;
   video {
     position: absolute;
@@ -31,205 +34,312 @@ export const Topo = styled.img`
 `;
 
 export const Overlay = styled.div`
-  /* background-image: url(${(props) => props.background}); */
-  /* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.7); */
-  /* @media screen and (max-width: 1000px) {
-    display: none;
-  } */
-  /* margin-right: 3px;
-  border-right: 3px solid rgba(199, 174, 134, 0.3); */
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    background:rgba(0,0,0,0.15);
-    /* background:linear-gradient(180deg, rgba(0,0,0,.5) 20%, rgba(0,0,0,0) 80%); */
-  /* img {
-    opacity: 0.8;
-  }
-  div {
-
-  } */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
 `;
 
 export const Right = styled.div`
-  background-image: url(${(props) => props.background});
   display: grid;
-grid-template-columns: minmax(0, 437px) 1fr;
-@media screen and (max-width: 1350px) {
-  grid-template-columns: 1fr;
-  }
- text-align: center;
+  height: fill-available;
+  grid-template-columns: minmax(0, 437px) 1fr;
+  text-align: center;
   padding: 0 20px 0 0;
   position: relative;
-
-
+  @media screen and (max-width: 1350px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 `;
 export const Intro = styled.h2`
-font-family: 'Lora', serif;
-text-transform: uppercase;
-margin: 0;
-margin-top: -4rem;
-/* opacity: .7 !important; */
+  font-family: "Hoefler Text", serif;
+  text-transform: uppercase;
+  margin: 0;
+
+  /* opacity: .7 !important; */
   font-size: 40px;
-  color:  rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
-margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
   line-height: 1.1;
-  white-space: nowrap;
   @media screen and (max-width: 700px) {
-font-size: 25px;
-}
+    font-size: 21px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
 `;
 export const SubIntro = styled.h3`
- white-space: nowrap;
-
-margin: 0;
-font-family: 'Lora', serif;
-text-transform: uppercase;
-/* opacity: .7 !important; */
+  margin: 0;
+  font-family: "Hoefler Text", serif;
+  text-transform: uppercase;
+  /* opacity: .7 !important; */
   font-size: 35.5px;
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
   @media screen and (max-width: 700px) {
-font-size: 20px;
-}
-
+    font-size: 19px;
+    margin-bottom: 0.5rem;
+  }
 `;
 export const Tagline = styled.h3`
-font-family: 'Lora', serif;
-white-space: nowrap;
-color: rgba(255, 255, 255, 1);
+  font-family: "Hoefler Text", serif;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 500;
-
+  border-bottom: 2px solid #c7ae86;
+  border-top: 2px solid #c7ae86;
+  padding: 15px 0px;
+  width: max-content;
+  margin: 0 auto;
+  word-spacing: 3px;
+  margin-top: 40px;
   @media screen and (max-width: 1000px) {
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 20px;
+    width: 100%;
   }
   @media screen and (max-width: 700px) {
-font-size: .8rem;
-}
-  border-bottom: 2px solid  #c7ae86;
-  border-top: 2px solid  #c7ae86;
-  padding: 3px 0px;
+    font-size: 12px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    padding: 0;
+  }
+`;
+export const LogoH = styled.img``;
+
+// export const CTA = styled(Link)`
+//   border: 2px solid white;
+//   color: white;
+//   border-radius: 100px;
+//   padding: 0 1.1rem;
+//   height: 36px;
+//   display: inline-flex;
+//   -webkit-box-pack: center;
+//   -webkit-justify-content: center;
+//   -ms-flex-pack: center;
+//   justify-content: center;
+//   -webkit-align-items: center;
+//   -webkit-box-align: center;
+//   -ms-flex-align: center;
+//   align-items: center;
+//   font-weight: 600;
+//   margin-top: 50px;
+//   /* &:hover{
+//       color: #000;
+//       background-color: white;
+
+//     } */
+//   animation-delay: 6.5s;
+
+//   @media screen and (max-width: 500px) {
+//     width: 50%;
+//     height: 55px;
+//     /* position: absolute;
+//     bottom: 5%;
+//     left:50%;
+//     transform: translateX(-50%); */
+//     /* background: white; */
+//     color: #fff;
+//     mix-blend-mode: screen;
+//     font-weight: 900;
+//     border-radius: 0;
+//     display: none;
+//   }
+// `;
+
+export const CTA = styled(Link)`
+  --shadow-elevation-low: -0.3px 0.4px 0.4px hsl(var(--shadow-color) / 0.08),
+    -0.3px 0.4px 0.4px -0.6px hsl(var(--shadow-color) / 0.07),
+    -0.4px 0.6px 0.5px -1.1px hsl(var(--shadow-color) / 0.06),
+    -0.7px 1.1px 1px -1.7px hsl(var(--shadow-color) / 0.05),
+    -1.4px 2px 1.8px -2.2px hsl(var(--shadow-color) / 0.05),
+    -2.4px 3.6px 3.2px -2.8px hsl(var(--shadow-color) / 0.04),
+    -4px 6px 5.4px -3.3px hsl(var(--shadow-color) / 0.03),
+    -6.2px 9.2px 8.3px -3.9px hsl(var(--shadow-color) / 0.02),
+    -9.2px 13.6px 12.3px -4.4px hsl(var(--shadow-color) / 0.02),
+    -13px 19.2px 17.4px -5px hsl(var(--shadow-color) / 0.01);
+  box-shadow: var(--shadow-elevation-low);
+  font-family: "Cinzel", serif;
   width: max-content;
-  margin:0 auto;
-  margin-top: 5rem;
-  position: relative;
-  &:after {
-      content: "";
-      background: #fff;
-      position: absolute;
-      top:10vh;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100%;
-      animation: grow 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      animation-delay: 6.5s;
-      width: 3px
-    }
-`;
-export const LogoH = styled.img`
-`;
+  margin: 0 auto;
+  margin-top: 50px;
+  /* color: #fff;
+  background-color: #c7ae86; */
+  text-decoration: none;
+  height: 50px;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 2rem; */
+  border: 2px solid #c7ae86;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  color: #c7ae86;
 
-export const Border = styled.div`
-min-height: 300px;
-box-sizing: border-box;
-/* border-radius:100%; */
-/* background-color: white; */
-width: 100%;
-/* mask-image: url(${({img}) => img});
-mask-repeat: no-repeat;
-mask-position: center;
-mask-composite: add; */
-margin-bottom: 4rem;
-outline: #c7ae86 solid 4px;
-outline-offset: 15px;
-opacity: .9;
-
-
-`
-// export const Line = styled.div`
-// grid-row: 2;
-// grid-column: 2;
-// width: 3px;
-// height: 100%;
-// min-height: 50px;
-// background-color: #c7ae86 ;
-// place-self: center;
-// align-items: center;
-// `
-
-export const CTA =styled(Link)`
-border: 2px solid white;
-/* width: max-content;
-height: max-content;
-margin: 0 auto;
-position: absolute;
-bottom: 13vh;
-left: 50%;
-transform: translate(-50%, -50%); */
-position: relative;
-top: 22vh;
-color: white;
-border-radius: 100px;
-padding: 0 1.1rem;
-height: 36px;
-display: inline-flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
+  &:hover {
+    color: #fff;
+    background-color: #c7ae86;
+  }
+  &:hover svg {
+    fill: white;
+  }
+  &:hover p {
+  }
+  svg {
+    height: 20px;
+    fill: #c7ae86;
+  }
+  span {
+    display: flex;
     justify-content: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    font-weight: 600;
-    &:hover{
-      color: #000;
-      background-color: white;
 
-    }
-animation-delay:6.5s;
-
-`
+    height: 46px;
+    width: 46px;
+    border-radius: 100px;
+    padding: 0 1rem;
+    /* transform: scale(1.01); */
+  }
+  p {
+    margin: 0;
+    padding: 0 0 0 2rem;
+  }
+  @media screen and (max-width: 800px) {
+    margin: 0 auto;
+    /* background-color: #c7ae86;
+    color: white; */
+    margin-top: 1rem;
+    display: none;
+  }
+`;
 
 export const LogoOverlay = styled.div`
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: relative;
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0) 90%);
-opacity: .6;
-@media screen and (max-width: 1350px) {
-   display: none;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 10, 10, 1);
+  border-right: 2px solid #c7ae86;
+  border-image: linear-gradient(90deg, #a1887f, #c7ae86) 1;
+  opacity: 0.9;
+  @media screen and (max-width: 1350px) {
+    display: none;
   }
-
-`
+`;
 export const Content = styled.div`
-align-self: center;
-justify-self: center;
-grid-column: 2;
-padding: 0 60px;
-@media screen and (max-width: 1350px) {
-  grid-column: 1;
+  align-self: center;
+  justify-self: center;
+  grid-column: 2;
+  padding: 0 60px;
+  @media screen and (max-width: 1350px) {
+    grid-column: 1;
+    padding: 0 20px;
   }
-`
+`;
 
+// export const Delimiter = styled.div`
+//   background: #fff;
+//   height: 100%;
+//   min-height: 0px;
+//   animation: grow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+//   animation-delay: 6.5s;
+//   width: 3px;
+//   align-self: center;
+//   justify-self: center;
+//   margin: 50px auto 25px auto;
+//   /* position: relative;
+//       top: 50px; */
+// `;
+
+export const MobileLogo = styled.img`
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+  width: 80%;
+  opacity: 0.8;
+  animation: scale-up-center 1s ease-in-out;
+`;
+
+export const CTAContainer = styled.div`
+  img {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: max-content;
+    border-radius: 1px;
+
+    .inner {
+      width: 100%;
+
+      transform: translateY(300px);
+
+      padding: 25px 20px 15px 20px;
+      background: rgb(193, 162, 108);
+      background: rgb(199, 174, 134);
+      background: linear-gradient(
+        180deg,
+        rgba(199, 174, 134, 1) 0%,
+        rgba(204, 168, 109, 1) 100%
+      );
+      --shadow-color: 0deg 0% 0%;
+      --shadow-elevation-high: 0.2px -0.3px 0.5px hsl(var(--shadow-color) / 0),
+        1.5px -2.1px 3.9px hsl(var(--shadow-color) / 0.02),
+        2.6px -3.7px 6.8px hsl(var(--shadow-color) / 0.03),
+        3.7px -5.3px 9.7px hsl(var(--shadow-color) / 0.05),
+        5.2px -7.4px 13.6px hsl(var(--shadow-color) / 0.07),
+        7.2px -10.3px 18.9px hsl(var(--shadow-color) / 0.08),
+        9.9px -14.2px 26px hsl(var(--shadow-color) / 0.1),
+        13.7px -19.6px 35.9px hsl(var(--shadow-color) / 0.12);
+      box-shadow: var(--shadow-elevation-high);
+      animation: slide-in-bottom 1s ease-in-out;
+      animation-delay: 5s;
+      animation-fill-mode: forwards;
+    }
+    img {
+      display: initial;
+      opacity: 0;
+      margin-top: 15px;
+      animation: bounce 2s infinite, fade-in-bck-2 2s;
+      /* animation-fill-mode: forwards; */
+      animation-delay: 7s;
+    }
+  }
+`;
+
+export const DesktopLogo = styled.img`
+  width: 60%;
+  margin-bottom: 50px;
+  @media screen and (max-width: 800px) {
+    display: none;
+    //newsssss
+  }
+`;

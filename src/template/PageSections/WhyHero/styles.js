@@ -106,8 +106,8 @@ export const Quote2 = styled.p`
      }
     }
 position: absolute;
-top: ${({ order }) => (order == '3' ? '50%':order == '2'? '51%': '50%')};
-right: ${({ order }) => (order == '3' ? '70px':order == '2'? '85px': '75px')};
+top: ${({ order }) => (order === '3' ? '50%':order === '2'? '51%': '50%')};
+right: ${({ order }) => (order === '3' ? '70px':order === '2'? '85px': '75px')};
 width: 55%;
 border-radius:3px;
 transform: translateY(-50%);
@@ -118,7 +118,7 @@ font-style: italic;
   font-size: 18px;
   color:#465569;
   z-index: 99;
-  background: ${({ order }) => (order == '3' ? 'rgba( 255, 255, 255, 0.5 )':order == '2'? 'rgba( 255, 255, 255, 0.7 )': 'rgba( 255, 255, 255, 0.9 )')};
+  background: ${({ order }) => (order === '3' ? 'rgba( 255, 255, 255, 0.5 )':order === '2'? 'rgba( 255, 255, 255, 0.7 )': 'rgba( 255, 255, 255, 0.9 )')};
 backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur( 20px );
 box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
@@ -133,5 +133,5 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-style: normal;
     opacity: .7;
   }
-  rotate: ${({ order }) => (order == '3' ? '0':order == '2'? '2deg': '-1.5deg')};
+  rotate: ${({ order }) => (order === '3' ? '0':order === '2'? '2deg': '-1.5deg')};
 `;

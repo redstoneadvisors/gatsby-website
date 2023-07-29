@@ -61,7 +61,9 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
     }
   }, [inView]);
 
-  const [bWidth, setBWidth] = React.useState(window.innerWidth);
+  const [bWidth, setBWidth] = React.useState(
+    typeof window === "undefined" ? 0 : window.innerWidth
+  );
   useEffect(() => {
     if (typeof window === "undefined") return;
 

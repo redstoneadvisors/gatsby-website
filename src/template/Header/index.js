@@ -18,31 +18,31 @@ const Header = () => {
   const location = useLocation();
   const [visible, setVisible] = useState(false);
 
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
+  // function getWindowDimensions() {
+  //   const { innerWidth: width, innerHeight: height } = window;
+  //   return {
+  //     width,
+  //     height,
+  //   };
+  // }
 
-  function useWindowDimensions() {
-    const [windowDimensions, setWindowDimensions] = React.useState(
-      getWindowDimensions()
-    );
+  // function useWindowDimensions() {
+  //   const [windowDimensions, setWindowDimensions] = React.useState(
+  //     getWindowDimensions()
+  //   );
 
-    React.useEffect(() => {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
+  //   React.useEffect(() => {
+  //     function handleResize() {
+  //       setWindowDimensions(getWindowDimensions());
+  //     }
 
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  //     window.addEventListener("resize", handleResize);
+  //     return () => window.removeEventListener("resize", handleResize);
+  //   }, []);
 
-    return windowDimensions;
-  }
-  const { height, width } = useWindowDimensions();
+  //   return windowDimensions;
+  // }
+  // const { height, width } = useWindowDimensions();
 
   const stupidFn = (component) => {
     if (location.pathname == "/") {
@@ -108,10 +108,10 @@ const Header = () => {
   };
   return (
     <>
-      {!process.env.NODE_ENV ||
+      {/* {!process.env.NODE_ENV ||
         (process.env.NODE_ENV === "production" && (
           <Debug>{width + "px" + height + "px"}</Debug>
-        ))}
+        ))} */}
       <Drawer
         placement="left"
         onClose={onClose}

@@ -24,6 +24,7 @@ import NavLogo from "../../../images/redstone-header-logo.svg";
 import Top from "../../../images/top.svg";
 import bg from "../../../images/sq-topo-g.svg";
 import MobileLogoWhite from "../../../images/red-drop.svg";
+import fallback from "../../../images/fallback.png";
 const HomeHero = ({ section: { elements } }) => {
   const videoRef = React.useRef();
   const setPlayBack = () => {
@@ -41,6 +42,7 @@ const HomeHero = ({ section: { elements } }) => {
     <Container>
       <Topo src={bg} />
       <video
+        poster={fallback}
         ref={videoRef}
         onCanPlay={() => setPlayBack()}
         height="100%"

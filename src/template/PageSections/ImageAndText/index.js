@@ -29,7 +29,6 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
     },
     [inViewRef]
   );
-  console.log(window);
   useEffect(() => {
     if (inView && window.location.pathname == "/") {
       if (elements.layout.value[0].codename === "left") {

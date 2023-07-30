@@ -152,6 +152,7 @@ export const CTA = styled(Link)`
   &:hover {
     color: #fff;
     background-color: #c7ae86;
+    transition: all ease-in-out 0.2s;
   }
   &:hover svg {
     fill: white;

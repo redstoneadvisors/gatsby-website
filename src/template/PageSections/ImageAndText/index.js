@@ -19,7 +19,7 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
   const leftRef = useRef();
   const rightRef = useRef();
 
-  const [inViewRef, inView] = useInView({ threshold: 0, rootMargin: "30%" });
+  const [inViewRef, inView] = useInView({ threshold: 0, rootMargin: "-40%" });
   const location = useLocation();
 
   const setRefs = useCallback(

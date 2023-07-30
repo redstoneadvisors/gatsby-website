@@ -194,7 +194,7 @@ export const LogoOverlay = styled.div`
   -webkit-box-pack: center;
   justify-content: center;
   position: relative;
-  z-index: 0;
+  z-index: -1;
   height: 100%;
   width: 100%;
   background: rgba(10, 10, 10, 1);

@@ -19,7 +19,7 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
   const leftRef = useRef();
   const rightRef = useRef();
 
-  const [inViewRef, inView] = useInView({ threshold: 0, rootMargin: "-40%" });
+  const [inViewRef, inView] = useInView({ threshold: 0.9, rootMargin: "0px" });
   const location = useLocation();
 
   const setRefs = useCallback(
@@ -29,8 +29,9 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
     },
     [inViewRef]
   );
+  console.log(window);
   useEffect(() => {
-    if (inView) {
+    if (inView && window.location.pathname == "/") {
       if (elements.layout.value[0].codename === "left") {
         leftRef.current.style.opacity = "1";
         leftRef.current.classList.add("slide-in-bottom");
@@ -58,6 +59,9 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
           rightRef.current.style.opacity = "1";
           rightRef.current.classList.add("slide-in-bottom");
         }
+    } else if (window.location.pathname != "/") {
+      leftRef.current.style.opacity = "1";
+      rightRef.current.style.opacity = "1";
     }
   }, [inView]);
 
@@ -163,6 +167,11 @@ export const ImageAndTextFragment = graphql`
         value
       }
       layout {
+        value {
+          codename
+        }
+      }
+      animation {
         value {
           codename
         }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -11,19 +11,19 @@ position: relative;
   padding-bottom: 50px;
   min-height: 100vh;
   overflow: hidden;
+  margin-bottom: 50px;
   img {
     width: 100%;
   }
-  video{
+  video {
     position: absolute;
-    z-index:-1;
+    z-index: -1;
     top: 0;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     bottom: 0;
     width: auto;
     filter: grayscale(100%);
-
   }
 `;
 
@@ -47,7 +47,7 @@ export const Title = styled.h1`
 `;
 export const Description = styled.h2`
   color: #c4c4c4;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "PT Serif", serif;
   margin-bottom: 50px;
   @media screen and (max-width: 1080px) {
@@ -61,7 +61,7 @@ export const Quote = styled.p`
   font-size: 20px;
   font-family: "PT Serif", serif;
   color: #888888;
-  font-style: italic;
+
   line-height: 40px;
   font-weight: 100;
   @media screen and (max-width: 1080px) {
@@ -77,12 +77,12 @@ export const Accent = styled.div`
   background-color: #86a1c3;
 `;
 export const Layer = styled.div`
-background:linear-gradient(180deg, rgba(255,255,255,.7),rgba(255,255,255,.95), rgb(255,255,255));
-display: flex;
+  background-color: white;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  outline: 6px solid white;
-  outline-offset: 15px;
-`
+  outline: 3px solid white;
+  outline-offset: 8px;
+`;

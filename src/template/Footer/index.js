@@ -51,7 +51,7 @@ const Footer = () => {
       }
     }
   `);
-  console.log(footerData);
+
   return (
     <Container>
       <Top>
@@ -66,10 +66,18 @@ const Footer = () => {
           <div>
             <h2>Navigation</h2>
             <ul>
-              <li><Link to="/who-we-are">Who We Are</Link></li>
-              <li><Link to="/what-we-do">What We Do</Link></li>
-              <li><Link to="/why-us">Why Us</Link></li>
-              <li><Link to="/contact-us">Contact Us</Link></li>
+              <li>
+                <Link to="/who-we-are">Who We Are</Link>
+              </li>
+              <li>
+                <Link to="/what-we-do">What We Do</Link>
+              </li>
+              <li>
+                <Link to="/why-us">Why Us</Link>
+              </li>
+              <li>
+                <Link to="/contact-us">Contact Us</Link>
+              </li>
             </ul>
           </div>
         </MidLeft>
@@ -89,8 +97,9 @@ const Footer = () => {
                 fill="#f4f6ff"
               />
             </svg>
-
-            {footerData.kontentItemFooter.elements.address.value}
+            <a href="https://www.google.com/maps/place/Redstone+Advisors+Inc/@37.7271708,-97.2428227,15z/data=!4m6!3m5!1s0x87bafd16310a4a7d:0xed9d4c38b13390e!8m2!3d37.7271708!4d-97.2428227!16s%2Fg%2F1tg79kff?entry=ttu">
+              {footerData.kontentItemFooter.elements.address.value}
+            </a>
           </div>
           <div>
             <svg
@@ -106,8 +115,11 @@ const Footer = () => {
                 fill="#f4f6ff"
               />
             </svg>
-
-            {footerData.kontentItemFooter.elements.email.value}
+            <a
+              href={`mailto: ${footerData.kontentItemFooter.elements.email.value}`}
+            >
+              {footerData.kontentItemFooter.elements.email.value}
+            </a>
           </div>
           <div>
             <svg
@@ -123,8 +135,9 @@ const Footer = () => {
                 fill="#f4f6ff"
               />
             </svg>
-
-            {footerData.kontentItemFooter.elements.phone.value}
+            <a href={`Tel: 3166872143`}>
+              {footerData.kontentItemFooter.elements.phone.value}
+            </a>
           </div>
           <div>
             <svg
@@ -139,8 +152,9 @@ const Footer = () => {
                 fill="#fff"
               />
             </svg>
-
-            {footerData.kontentItemFooter.elements.fax.value}
+            <a href={`Tel: 3166872146`}>
+              {footerData.kontentItemFooter.elements.fax.value}
+            </a>
           </div>
         </MidRight>
       </Middle>

@@ -23,7 +23,7 @@ export const Top = styled.div`
   margin-bottom: 25px;
   @media screen and (max-width: 800px) {
     margin-bottom: 55px;
-    img{
+    img {
       max-width: 80%;
     }
   }
@@ -58,7 +58,7 @@ export const MidLeft = styled.div`
     li {
       white-space: nowrap;
       font-weight: 600;
-      a{
+      a {
         color: inherit;
       }
     }
@@ -79,6 +79,13 @@ export const MidRight = styled.div`
     margin-right: 25px;
     path {
       fill: #707070;
+    }
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
     }
   }
 `;

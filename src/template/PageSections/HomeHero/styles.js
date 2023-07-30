@@ -216,20 +216,6 @@ export const Content = styled.div`
   }
 `;
 
-// export const Delimiter = styled.div`
-//   background: #fff;
-//   height: 100%;
-//   min-height: 0px;
-//   animation: grow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-//   animation-delay: 6.5s;
-//   width: 3px;
-//   align-self: center;
-//   justify-self: center;
-//   margin: 50px auto 25px auto;
-//   /* position: relative;
-//       top: 50px; */
-// `;
-
 export const MobileLogo = styled.img`
   @media screen and (min-width: 800px) {
     display: none;

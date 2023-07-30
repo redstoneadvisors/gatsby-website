@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { RichTextElement } from "@kentico/gatsby-kontent-components";
 import { Modal } from "antd";
+import CloseIcon from "../CloseIcon";
 import {
   Container,
   Headshot,
@@ -27,6 +28,7 @@ const BioCard = ({ data, index }) => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
   return (
     <>
       <Modal
@@ -35,6 +37,7 @@ const BioCard = ({ data, index }) => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        closeIcon={<CloseIcon />}
       >
         <ModalBody>
           <Left>

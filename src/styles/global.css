@@ -931,3 +931,9 @@ html {
     transform: translateZ(160px);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .ant-modal {
+    max-width: 90%;
+  }
+}

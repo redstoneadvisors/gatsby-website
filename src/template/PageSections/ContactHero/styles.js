@@ -18,7 +18,7 @@ export const Left = styled.div`
   justify-content: center;
   padding: 0 80px;
   @media screen and (max-width: 600px) {
-   padding: 0 40px;
+    padding: 0 40px;
   }
   /* padding-left: 80px; */
 `;
@@ -54,7 +54,7 @@ export const Title = styled.h1`
   font-family: "PT Serif", serif;
   font-size: 60px;
   @media screen and (max-width: 600px) {
-  font-size: 50px;
+    font-size: 50px;
   }
   font-weight: 700;
 
@@ -79,18 +79,25 @@ export const Title = styled.h1`
 export const Description = styled.p`
   margin-bottom: 5rem;
   margin-top: 3rem;
-  font-family: "PT Serif",serif;
-    font-size: 18px;
-    max-width: 450px;
-    color: #757575;
-    line-height: 40px;
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+  max-width: 450px;
+  color: #757575;
+  line-height: 40px;
   line-height: 40px;
   @media screen and (max-width: 1080px) {
     font-size: 18px;
   }
   display: flex;
   flex-direction: column;
-  span {
+  p {
+    margin-bottom: 0;
+    &:nth-child(2) {
+      margin-bottom: 2rem;
+    }
+    &:nth-child(3) {
+      margin-bottom: 2rem;
+    }
   }
 `;
 export const Quote = styled.p`

@@ -4,7 +4,6 @@ export const Container = styled.div`
   --app-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  /* border-bottom: 10px solid #c7ae86; */
   min-height: 100vh;
   @media screen and (max-width: 500px) {
     border-bottom: none;
@@ -117,47 +116,6 @@ export const Tagline = styled.h3`
     padding: 0;
   }
 `;
-export const LogoH = styled.img``;
-
-// export const CTA = styled(Link)`
-//   border: 2px solid white;
-//   color: white;
-//   border-radius: 100px;
-//   padding: 0 1.1rem;
-//   height: 36px;
-//   display: inline-flex;
-//   -webkit-box-pack: center;
-//   -webkit-justify-content: center;
-//   -ms-flex-pack: center;
-//   justify-content: center;
-//   -webkit-align-items: center;
-//   -webkit-box-align: center;
-//   -ms-flex-align: center;
-//   align-items: center;
-//   font-weight: 600;
-//   margin-top: 50px;
-//   /* &:hover{
-//       color: #000;
-//       background-color: white;
-
-//     } */
-//   animation-delay: 6.5s;
-
-//   @media screen and (max-width: 500px) {
-//     width: 50%;
-//     height: 55px;
-//     /* position: absolute;
-//     bottom: 5%;
-//     left:50%;
-//     transform: translateX(-50%); */
-//     /* background: white; */
-//     color: #fff;
-//     mix-blend-mode: screen;
-//     font-weight: 900;
-//     border-radius: 0;
-//     display: none;
-//   }
-// `;
 
 export const CTA = styled(Link)`
   --shadow-elevation-low: -0.3px 0.4px 0.4px hsl(var(--shadow-color) / 0.08),
@@ -336,6 +294,7 @@ export const CTAContainer = styled.div`
 `;
 
 export const DesktopLogo = styled.img`
+  animation: fade-in-bck-2 2s;
   width: 60%;
   margin-bottom: 50px;
   @media screen and (max-width: 800px) {

@@ -92,7 +92,7 @@ const Header = () => {
   const [headerColor, setHeaderColor] = useState("none");
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setHeaderColor("white") : setHeaderColor("none");
+    window.scrollY > 3 ? setHeaderColor("white") : setHeaderColor("none");
   };
 
   useEffect(() => {

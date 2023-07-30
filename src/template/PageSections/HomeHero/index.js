@@ -68,12 +68,12 @@ const HomeHero = ({ section: { elements } }) => {
             {elements.sub_intro.value}
           </SubIntro>
 
-          {/* <Tagline className="text-focus-in-2" >{elements.tagline.value}</Tagline> */}
           <CTAContainer>
             <div className="inner">
-              <Tagline>{elements.tagline.value}</Tagline>
+              <Tagline className="text-focus-in-5">
+                {elements.tagline.value}
+              </Tagline>
 
-              {/* <Delimiter/> */}
               <img
                 src={caret}
                 height="30px"
@@ -81,10 +81,7 @@ const HomeHero = ({ section: { elements } }) => {
                 className="mouse-icon"
               />
             </div>
-            {/* <CTA href="#see-more" className="text-focus-in">
-              SEE MORE
-            </CTA> */}
-            <CTA href="#see-more">
+            <CTA href="#see-more" className="text-focus-in-6">
               <p>Learn More</p>
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

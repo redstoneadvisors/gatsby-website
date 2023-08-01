@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 100vh;
   max-height: 1080px;
   gap: 2rem;
+  margin-top: 100px;
   @media screen and (max-width: 1080px) {
     grid-template-columns: 1fr;
     margin-top: 100px;

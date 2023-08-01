@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Title = styled.h2`
   font-family: "PT Serif", serif;
   font-weight: bold;
-  font-size: 59px;
+  font-size: 47px;
   margin-bottom: 175px;
   margin-top: 175px;
   text-align: center;

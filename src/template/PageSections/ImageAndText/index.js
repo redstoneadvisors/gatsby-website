@@ -12,7 +12,11 @@ import {
   Cta,
   Tagline,
   StaticImage,
+  ImageContainer,
+  FloatingQuote,
+  Quote,
 } from "./styles";
+import quote from "../../../images/quote-icon.svg";
 import { useLocation } from "@reach/router";
 import { useInView } from "react-intersection-observer";
 const ImageAndText = ({ section: { elements }, orientation, index }) => {
@@ -22,6 +26,8 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
   const [inViewRef, inView] = useInView({ threshold: 0.9, rootMargin: "0px" });
   const location = useLocation();
 
+  console.log(location.pathname);
+
   const setRefs = useCallback(
     (node) => {
       rightRef.current = node;
@@ -30,7 +36,7 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
     [inViewRef]
   );
   useEffect(() => {
-    if (inView && window.location.pathname == "/") {
+    if (inView && location.pathname == "/") {
       if (elements.layout.value[0].codename === "left") {
         leftRef.current.style.opacity = "1";
         leftRef.current.classList.add("slide-in-bottom");
@@ -101,11 +107,22 @@ const ImageAndText = ({ section: { elements }, orientation, index }) => {
           </video>
         ) : (
           <>
-            <StaticImage
-              src={elements.image.value[0]?.url}
-              dimensions={elements.image_dimensions?.value[0]?.codename}
-              location={location.pathname}
-            />
+            <ImageContainer>
+              <StaticImage
+                src={elements.image.value[0]?.url}
+                dimensions={elements.image_dimensions?.value[0]?.codename}
+                location={location.pathname}
+              />
+              {location.pathname == "/what-we-do" && (
+                <FloatingQuote>
+                  <img src={quote} alt="" />
+                  <Quote>
+                    <p>Where you stand depends on where you sit</p>
+                    <span>"Miles Law" by Rufus Miles</span>
+                  </Quote>
+                </FloatingQuote>
+              )}
+            </ImageContainer>
             <Tagline>{elements.tagline.value}</Tagline>
           </>
         )}

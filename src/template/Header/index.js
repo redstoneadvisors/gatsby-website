@@ -43,10 +43,14 @@ const Header = () => {
   //   return windowDimensions;
   // }
   // const { height, width } = useWindowDimensions();
-
+  const currentYear = new Date().getFullYear();
   const stupidFn = (component) => {
     if (location.pathname == "/") {
-      return "";
+      if (headerColor == "white") {
+        return component;
+      } else {
+        return "";
+      }
     }
     if (
       location.pathname === "/why-us" ||
@@ -191,14 +195,14 @@ const Header = () => {
             position: "absolute",
             bottom: "10px",
             fontSize: "12px",
-            color: "#707070",
+            color: "rgb(77, 78, 86)",
             left: "50%",
             transform: "translateX(-50%)",
-            opacity: ".8",
+            opacity: ".6",
             width: "max-content",
           }}
         >
-          © 2023 Redstone Advisors, Inc. All Rights Reserved.
+          © {currentYear} Redstone Advisors, Inc. All Rights Reserved.
         </span>
       </Drawer>
       <Navbar background={headerColor}>

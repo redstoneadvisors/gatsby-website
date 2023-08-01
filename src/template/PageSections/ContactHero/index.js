@@ -20,7 +20,6 @@ const WhoHero = ({ section }) => {
       <Left>
         <Title>{section.elements.title.value}</Title>
         <Description>
-          {/* <RichTextElement value={section.elements.description.value} /> */}
           <p>You created the wealth.</p>
           <p>We can help you keep it.</p>
           <p>Why not consider the road less traveled?</p>

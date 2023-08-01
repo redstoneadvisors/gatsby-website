@@ -107,6 +107,7 @@ export const Right = styled.div`
   }
   p {
     color: #707070;
+
     font-size: 16px;
     line-height: 2.4rem;
     @media screen and (max-width: 1080px) {

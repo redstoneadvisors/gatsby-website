@@ -7,7 +7,7 @@ const BioList = ({ section }) => {
     <Container>
       <Title>
         {section.elements.title.value}
-        <span>{section.elements.title_2.value}</span>.
+        <span>{section.elements.title_2.value}</span>
       </Title>
       <Bios>
         <AccentLines>
@@ -25,7 +25,7 @@ const BioList = ({ section }) => {
             return <BioCard index={index} data={item} />;
           })}
         </Right>
-        <AccentLines layout={'right'}>
+        <AccentLines layout={"right"}>
           <div></div>
           <div></div>
           <div></div>

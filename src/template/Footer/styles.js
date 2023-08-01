@@ -31,35 +31,51 @@ export const Top = styled.div`
 export const Middle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     margin-bottom: 25px;
   }
 `;
 export const MidLeft = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
   p {
     margin-bottom: 25px;
   }
   div {
-    @media screen and (max-width: 800px) {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 25px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
   }
   ul {
+    .resources {
+      font-weight: 400;
+    }
     padding: 0;
     list-style: none;
     display: flex;
+    flex-direction: column;
     @media screen and (max-width: 800px) {
       flex-direction: column;
     }
-    gap: 1rem;
+    gap: 0.5rem;
     li {
       white-space: nowrap;
       font-weight: 600;
       a {
         color: inherit;
+        &:hover {
+          color: inherit;
+          text-decoration: underline;
+        }
       }
     }
   }

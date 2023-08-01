@@ -103,9 +103,7 @@ export const NavLink = styled(Link)`
   span {
     color: rgba(0, 0, 0, 1);
   }
-  &:hover span {
-    color: #c7ae86;
-  }
+
   &:last-of-type {
     grid-column: 1/3;
     width: 100%;
@@ -142,7 +140,7 @@ export const NavList = styled.ul`
     max-height: 150px;
     margin: 0 auto;
     margin-bottom: 1rem;
-    border-radius: 4px;
+    border-radius: 8px;
     background: #fff;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     padding: 40px 20px 15px 20px;
@@ -155,9 +153,9 @@ export const NavList = styled.ul`
     border: 4px solid;
     border-image: repeating-linear-gradient(
         135deg,
-        #c7ae86 0 5px,
-        #c7ae86 0 10px,
-        #c7ae86 0 15px
+        #b7c3be 0 5px,
+        #b7c3be 0 10px,
+        #b7c3be 0 15px
       )
       3;
     -webkit-mask: conic-gradient(
@@ -186,7 +184,7 @@ export const Active = styled.div`
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  background-color: #c7ae86;
+  background-color: #b7c3be;
   margin: 0 auto;
 `;
 export const Debug = styled.div`

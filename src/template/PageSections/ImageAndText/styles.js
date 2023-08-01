@@ -270,3 +270,56 @@ export const Tagline = styled.h4`
     }
   }
 `;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  padding: 0;
+  margin: 0;
+`;
+
+export const FloatingQuote = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  p {
+    font-family: "Cinzel", serif;
+  }
+  span {
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    color: #c7ae86;
+    font-weight: 600;
+  }
+  p,
+  div,
+  span {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.5;
+  }
+`;
+
+export const Quote = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 800px) {
+    width: 70%;
+    top: 55%;
+    bottom: initial;
+    p {
+      font-size: 20px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+`;

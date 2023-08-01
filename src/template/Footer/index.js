@@ -59,10 +59,6 @@ const Footer = () => {
       </Top>
       <Middle>
         <MidLeft>
-          <h2>About</h2>
-          <RichTextElement
-            value={footerData.kontentItemFooter.elements.about.value}
-          />
           <div>
             <h2>Navigation</h2>
             <ul>
@@ -78,6 +74,26 @@ const Footer = () => {
               <li>
                 <Link to="/contact-us">Contact Us</Link>
               </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Resources</h2>
+            <ul>
+              {footerData.kontentItemFooter.elements.legal_links.value.map(
+                (el) => {
+                  return (
+                    <li>
+                      <a
+                        href={el.elements.pdf.value[0].url}
+                        target="_blank"
+                        className="resources"
+                      >
+                        {el.elements.label.value}
+                      </a>
+                    </li>
+                  );
+                }
+              )}
             </ul>
           </div>
         </MidLeft>
@@ -163,15 +179,7 @@ const Footer = () => {
         <RichTextElement
           value={footerData.kontentItemFooter.elements.disclosure.value}
         />
-        <div>
-          {footerData.kontentItemFooter.elements.legal_links.value.map((el) => {
-            return (
-              <a href={el.elements.pdf.value[0].url} target="_blank">
-                {el.elements.label.value}
-              </a>
-            );
-          })}
-        </div>
+
         <span>© 2023 Redstone Advisors, Inc. All Rights Reserved.</span>
       </Bottom>
     </Container>

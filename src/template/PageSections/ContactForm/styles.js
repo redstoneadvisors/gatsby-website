@@ -7,7 +7,6 @@ export const Container = styled.div`
   @media screen and (max-width: 1080px) {
     margin: 0;
   }
-
 `;
 export const Background = styled.div`
   background-color: #4c4e56;
@@ -15,9 +14,9 @@ export const Background = styled.div`
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 2rem;
-  padding: 75px;
+  padding: 125px 100px;
   @media screen and (max-width: 600px) {
-   padding: 40px
+    padding: 40px;
   }
   @media screen and (max-width: 1080px) {
     grid-template-columns: 1fr;
@@ -55,15 +54,14 @@ export const Description = styled.div`
   }
 `;
 export const Left = styled.div`
-
   form {
     display: flex;
     flex-direction: column;
   }
-  input::placeholder, textarea::placeholder {
-color: rgba(255,255,255, .5);
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 
- 
     font-weight: 500;
   }
   input,
@@ -73,17 +71,18 @@ color: rgba(255,255,255, .5);
     box-sizing: content-box;
     padding: 8px 15px;
     max-width: 595px;
-    background:none;
+    background: none;
     border-radius: 3px;
     margin-bottom: 2rem;
-    &:hover, &:focus{
+    &:hover,
+    &:focus {
       outline: none;
-
     }
-    &:focus{
-      transform: scale(1.05);
+    &:focus {
+      position: relative;
+      transform: scale(1.02);
       border-width: 2px;
-      transition: all ease-in .1s;
+      transition: all ease-in-out 0.16s;
     }
   }
   textarea {
@@ -92,6 +91,7 @@ color: rgba(255,255,255, .5);
   }
 `;
 export const Right = styled.div`
+margin-left: 2rem ;
   h3 {
     color: #c7ae86;
     font-family: "PT Serif", serif;

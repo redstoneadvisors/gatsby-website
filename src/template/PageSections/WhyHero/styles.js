@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   height: 100vh;
-  @media screen and (max-width: 925px) {
+
+  @media screen and (max-width: 1025px) {
     grid-template-columns: 1fr;
     position: relative;
   }
@@ -13,6 +14,7 @@ export const Container = styled.div`
 export const Left = styled.div`
   background-color: rgba(134, 166, 195, 0.45);
   width: 100%;
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +27,7 @@ export const Left = styled.div`
   left: 0;
   bottom: 0;
   z-index: 99;
-  @media screen and (max-width: 925px) {
+  @media screen and (max-width: 1025px) {
     justify-content: flex-start;
     padding: 50px 0;
     align-items: center;
@@ -45,15 +47,20 @@ export const Right = styled.div`
   grid-column: 1/3;
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: 925px) {
+  @media screen and (max-width: 1025px) {
     grid-row: 1;
   }
   img {
     height: 100%;
-    @media screen and (max-width: 925px) {
+    @media screen and (max-width: 1025px) {
       object-fit: cover;
     }
     object-fit: contain;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 export const Title = styled.h1`
@@ -85,7 +92,8 @@ export const Description = styled.div`
 `;
 
 export const Quote2 = styled.p`
-  @media screen and (max-width: 925px) {
+  max-width: 800px;
+  @media screen and (max-width: 1025px) {
     display: none;
     &:first-of-type {
       display: block;

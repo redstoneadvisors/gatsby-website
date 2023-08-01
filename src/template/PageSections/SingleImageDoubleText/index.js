@@ -24,7 +24,9 @@ const SingleImageDoubleText = ({ section }) => {
             {section.elements.second_title.value}
           </Title>
           <Description layout={position} order={2}>
-          <RichTextElement value={section.elements.second_description_rt.value} />
+            <RichTextElement
+              value={section.elements.second_description_rt.value}
+            />
           </Description>
         </div>
       </Right>
@@ -55,7 +57,7 @@ export const SingleImageDoubleTextFragment = graphql`
       second_description {
         value
       }
-      second_description_rt{
+      second_description_rt {
         value
       }
       hero {

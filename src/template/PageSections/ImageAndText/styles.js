@@ -95,6 +95,7 @@ export const Title = styled.h2`
   font-size: 48px;
   margin: 0;
   padding: 0;
+  width: auto;
 
   font-size: ${({ orientation }) =>
     orientation === "two-column" ? "32px" : "48px"};
@@ -107,7 +108,7 @@ export const Title = styled.h2`
   font-weight: bold;
   position: relative;
   width: ${({ orientation }) =>
-    orientation === "two-column" ? "max-content" : "max-content"};
+    orientation === "two-column" ? "auto" : "max-content"};
   margin: ${({ location }) =>
     location === "/" ? "0 0 2rem 0" : " 0 auto 5rem auto;"};
 
@@ -115,7 +116,7 @@ export const Title = styled.h2`
     content: "";
     background: #c7ae86;
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     left: 0;
     height: 5px;
     width: 100%;
@@ -124,7 +125,7 @@ export const Title = styled.h2`
   @media screen and (max-width: 500px) {
     margin: ${({ location }) =>
       location === "/" ? "0 auto 2rem auto" : " 3rem auto 3rem auto;"};
-    line-height: 1;
+    line-height: 1.3;
   }
 `;
 export const Description = styled.div`

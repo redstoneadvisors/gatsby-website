@@ -60,13 +60,14 @@ export const Title = styled.h1`
   font-family: "PT Serif", serif;
   font-size: 60px;
   @media screen and (max-width: 600px) {
-    font-size: 50px;
+    font-size: 40px;
   }
   font-weight: 700;
 
   @media screen and (max-width: 1080px) {
     max-width: 100%;
     display: none;
+    padding-top: 50px;
   }
   line-height: 80px;
   position: relative;
@@ -80,6 +81,8 @@ export const Title = styled.h1`
     width: 50%;
     @media screen and (max-width: 1080px) {
       width: 90%;
+      height: 4px;
+      bottom: -5px;
     }
   }
 `;

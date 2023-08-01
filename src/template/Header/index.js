@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Contact, NavLink, NavList, Active, Debug } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import home from "../../images/Large/house.svg";
-import briefcase from "../../images/Large/briefcase.svg";
-import envelope from "../../images/Large/envelope.svg";
-import building from "../../images/Large/building.svg";
-import woman from "../../images/Large/woman.svg";
+import home from "../../images/house.svg";
+import briefcase from "../../images/briefcase.svg";
+import envelope from "../../images/phone-office.svg";
+import building from "../../images/comments-question-check.svg";
+import woman from "../../images/address-book.svg";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../images/redstone-header-logo.svg";
 import LogoWhite from "../../images/red-long-white2.svg";

@@ -64,7 +64,7 @@ export const Contact = styled(Link)`
   border: ${({ headerColor, location }) =>
     headerColor === "white" ||
     (location != "/" && location != "/what-we-do" && location != "/why-us")
-      ? "3px solid #c7ae86"
+      ? "2px solid #c7ae86"
       : "2px solid white"};
   /* border: 2px solid white; */
   color: ${({ headerColor, location }) =>
@@ -85,8 +85,7 @@ export const Contact = styled(Link)`
     color: white;
     border: 2px solid #c7ae86;
     background-color: #c7ae86;
-    transform: scale(1.05);
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.3s !important;
   }
   @media screen and (max-width: 800px) {
     display: none;

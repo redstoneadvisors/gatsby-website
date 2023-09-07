@@ -57,7 +57,7 @@ export const Right = styled.div`
   }
 `;
 export const Intro = styled.h2`
-  font-family: "Hoefler Text", serif;
+  font-family: 'EB Garamond', serif;
   text-transform: uppercase;
   margin: 0;
 
@@ -75,7 +75,7 @@ export const Intro = styled.h2`
 `;
 export const SubIntro = styled.h3`
   margin: 0;
-  font-family: "Hoefler Text", serif;
+  font-family: 'EB Garamond', serif;
   text-transform: uppercase;
   /* opacity: .7 !important; */
   font-size: 35.5px;
@@ -87,7 +87,7 @@ export const SubIntro = styled.h3`
   }
 `;
 export const Tagline = styled.h3`
-  font-family: "Hoefler Text", serif;
+  font-family: 'EB Garamond', serif;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   font-size: 18px;

@@ -63,6 +63,8 @@ const Master = ({headerData, footerData, children, location}) => {
 					href="https://fonts.gstatic.com"
 					crossorigin
 				/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
 				<meta name="theme-color" content="#c7ae86"/>
 
 			</Helmet>
